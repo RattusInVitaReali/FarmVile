@@ -6,9 +6,8 @@ enum ItemType {SICKLE, GUN, BUCKET}
 export(ItemType) var item_type
 export(Texture) var item_texture
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+func use():
+	pass
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
