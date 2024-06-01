@@ -1,55 +1,52 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://bg.png" type="Texture" id=1]
-[ext_resource path="res://player/player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://interactable/interactable.tscn" type="PackedScene" id=3]
+[ext_resource path="res://world/world.tscn" type="PackedScene" id=1]
+[ext_resource path="res://main.gd" type="Script" id=4]
+[ext_resource path="res://camera.gd" type="Script" id=5]
 
-[node name="Main" type="Node2D"]
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource( 4 )
 
-[node name="Bg" type="Sprite" parent="."]
-position = Vector2( 574, 293 )
-texture = ExtResource( 1 )
-
-[node name="Interactable" parent="." instance=ExtResource( 3 )]
-position = Vector2( 509, 207 )
-hover_text = "W W W W"
-
-[node name="Interactable2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 562, 348 )
-
-[node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 382, 248 )
-
-[node name="Player2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 101, 300 )
-player_id = 1
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+[node name="Viewports" type="HBoxContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="ViewportContainer" type="ViewportContainer" parent="CanvasLayer/HBoxContainer"]
-margin_right = 508.0
+[node name="ViewportContainer1" type="ViewportContainer" parent="Viewports"]
+margin_right = 503.0
 margin_bottom = 600.0
 size_flags_horizontal = 3
+stretch = true
 
-[node name="Viewport" type="Viewport" parent="CanvasLayer/HBoxContainer/ViewportContainer"]
+[node name="Viewport1" type="Viewport" parent="Viewports/ViewportContainer1"]
+size = Vector2( 503, 600 )
+handle_input_locally = false
+render_target_update_mode = 3
 
-[node name="Camera2D" type="Camera2D" parent="CanvasLayer/HBoxContainer/ViewportContainer/Viewport"]
+[node name="Main" parent="Viewports/ViewportContainer1/Viewport1" instance=ExtResource( 1 )]
 
-[node name="Panel" type="Panel" parent="CanvasLayer/HBoxContainer"]
-margin_left = 512.0
-margin_right = 522.0
+[node name="Camera2D" type="Camera2D" parent="Viewports/ViewportContainer1/Viewport1"]
+current = true
+script = ExtResource( 5 )
+
+[node name="Panel" type="Panel" parent="Viewports"]
+margin_left = 507.0
+margin_right = 517.0
 margin_bottom = 600.0
+rect_min_size = Vector2( 10, 0 )
 
-[node name="ViewportContainer2" type="ViewportContainer" parent="CanvasLayer/HBoxContainer"]
-margin_left = 516.0
+[node name="ViewportContainer2" type="ViewportContainer" parent="Viewports"]
+margin_left = 521.0
 margin_right = 1024.0
 margin_bottom = 600.0
 size_flags_horizontal = 3
+stretch = true
 
-[node name="Viewport" type="Viewport" parent="CanvasLayer/HBoxContainer/ViewportContainer2"]
+[node name="Viewport2" type="Viewport" parent="Viewports/ViewportContainer2"]
+size = Vector2( 503, 600 )
+handle_input_locally = false
+render_target_update_mode = 3
 
-[node name="Camera2D" type="Camera2D" parent="CanvasLayer/HBoxContainer/ViewportContainer2/Viewport"]
+[node name="Camera2D" type="Camera2D" parent="Viewports/ViewportContainer2/Viewport2"]
+position = Vector2( 521, 0 )
+current = true
+script = ExtResource( 5 )

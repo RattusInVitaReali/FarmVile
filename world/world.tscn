@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://interactable/interactable.tscn" type="PackedScene" id=3]
+[ext_resource path="res://player/player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://bg.png" type="Texture" id=5]
+
+[node name="Main" type="Node2D"]
+
+[node name="Bg" type="Sprite" parent="."]
+position = Vector2( 574, 293 )
+texture = ExtResource( 5 )
+
+[node name="Interactable" parent="." instance=ExtResource( 3 )]
+position = Vector2( 509, 207 )
+hover_text = "W W W W"
+
+[node name="Interactable2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 562, 348 )
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 382, 248 )
+
+[node name="Player2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 101, 300 )
+player_id = 1
