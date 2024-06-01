@@ -76,7 +76,7 @@ func interact():
 		current_interactable = null
 
 func drop():
-	if (item != null):
+	if (item != null and is_instance_valid(item)):
 		item.get_parent().remove_child(item)
 		get_parent().add_child(item)
 		item.position = position
@@ -84,6 +84,7 @@ func drop():
 		item.position.x += 30
 		item.position.y += 20
 		item.enable()
+		item = null
 
 func shoot():
 	if item == null:

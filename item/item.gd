@@ -21,6 +21,7 @@ func _ready():
 
 
 func _on_Interactable_interacted_with(player):
+	print("Item")
 	player.equip(self)
 
 func enable():

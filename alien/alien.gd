@@ -26,6 +26,7 @@ func _physics_process(delta):
 
 
 func take_damage():
+	$CPUParticles2D.emitting = true
 	hp -= 1
 	print("OW: " + str(hp))
 	if hp <= 0:
