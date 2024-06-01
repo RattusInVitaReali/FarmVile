@@ -85,6 +85,21 @@ func reset_crop():
 	water_level = 100.0
 	update_crop_sprite()
 
+func can_interact(player: Player) -> bool:
+	if player.item != null:
+		if player.item.item_type == Item.ItemType.BUCKET:
+			return true
+		if player.item.item_type == Item.ItemType.SICKLE:
+			if crop_state == CropState.RIPE:
+				return true
+			return false
+	return false
 
-func _on_Interactable_interacted_with():
-	pass # Replace with function body.
+
+func _on_Interactable_interacted_with(player: Player):
+	if player.item.item_type == Item.ItemType.BUCKET:
+		water_level += 50
+		if water_level > 100:
+			water_level = 100
+		update_crop_sprite()
+		return
