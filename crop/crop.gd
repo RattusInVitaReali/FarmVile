@@ -97,7 +97,6 @@ func can_interact(player: Player) -> bool:
 
 
 func _on_Interactable_interacted_with(player: Player):
-	print("Interacted with crop", player.item.item_type, player)
 	if player.item == null:
 		return
 	if player.item.item_type == Item.ItemType.BUCKET:
@@ -105,3 +104,13 @@ func _on_Interactable_interacted_with(player: Player):
 		update_crop_sprite()
 		player.item.use()
 		return
+	if player.item.item_type == Item.ItemType.SICKLE:
+		if crop_state == CropState.RIPE:
+			crop_state = CropState.EMPTY
+			update_crop_sprite()
+			# player.item.use()
+			drop_wheat()
+			return
+
+func drop_wheat():
+	pass
