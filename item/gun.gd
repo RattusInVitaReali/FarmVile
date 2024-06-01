@@ -1,8 +1,8 @@
 extends Item
 
-const Bullet = preload("res://item/Bullet.tscn")
+const Bullet = preload("res://item/bullet.tscn")
 
-func shoot():
+func shoot(player: Player):
 	var bodies = $Area2D.get_overlapping_bodies()
 	if bodies.size() == 0:
 		return
@@ -12,5 +12,6 @@ func shoot():
 			closest = body
 	$Sprite.look_at(closest.global_position)
 	var bullet = Bullet.instance()
-	add_child(bullet)
+	player.get_parent().add_child(bullet)
 	bullet.set_target(closest)
+	bullet.position = player.position
