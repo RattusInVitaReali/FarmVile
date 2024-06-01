@@ -33,13 +33,19 @@ _global_script_classes=[ {
 "class": "Sickle",
 "language": "GDScript",
 "path": "res://item/sickle.gd"
+}, {
+"base": "Item",
+"class": "Wheat",
+"language": "GDScript",
+"path": "res://crop/wheat.gd"
 } ]
 _global_script_class_icons={
 "BUCKET": "",
 "Interactable": "",
 "Item": "",
 "Player": "",
-"Sickle": ""
+"Sickle": "",
+"Wheat": ""
 }
 
 [application]

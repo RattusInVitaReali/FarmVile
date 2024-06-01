@@ -26,10 +26,13 @@ water_depletion_rate = 3.0
 
 [node name="Bucket" parent="." instance=ExtResource( 2 )]
 position = Vector2( 369, 423 )
-water_level = 100
 
 [node name="Tap" parent="." instance=ExtResource( 3 )]
 position = Vector2( 512, 78 )
 
 [node name="Sickle" parent="." instance=ExtResource( 6 )]
 position = Vector2( 516, 298 )
+
+[node name="Crop2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 101, 396 )
+water_depletion_rate = 3.0
