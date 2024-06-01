@@ -97,6 +97,8 @@ func can_interact(player: Player) -> bool:
 
 
 func _on_Interactable_interacted_with(player: Player):
+	if player.item == null:
+		return
 	if player.item.item_type == Item.ItemType.BUCKET:
 		water_level = 100
 		update_crop_sprite()
