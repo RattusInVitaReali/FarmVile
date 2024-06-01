@@ -42,11 +42,12 @@ func _physics_process(delta):
 
 
 func _on_InteractableScaner_area_entered(area):
-	if current_interactable != null:
-		current_interactable.stop_hover()
-	current_interactable = area.get_parent()
-	current_interactable.start_hover()
-
+	var interactable = area.get_parent()
+	if interactable.can_interact(self):
+		if current_interactable != null:
+			current_interactable.stop_hover()
+		current_interactable = interactable
+		current_interactable.start_hover()
 
 func _on_InteractableScaner_area_exited(area):
 	if current_interactable != null:
@@ -56,14 +57,19 @@ func _on_InteractableScaner_area_exited(area):
 	var closest = null
 	for a in areas:
 		if closest == null or a.position.distance_to(position) < closest.position.distance_to(position):
-			closest = a
+			if a.get_parent().can_interact(self):
+				closest = a
 	if closest != null:
 		current_interactable = closest.get_parent()
 		current_interactable.start_hover()
 
 func interact():
-	if current_interactable != null:
-		current_interactable.interact(self)
+	if current_interactable == null:
+		return
+	current_interactable.interact(self)
+	if !current_interactable.can_interact(self):
+		current_interactable.stop_hover()
+		current_interactable = null
 
 func drop():
 	if (item != null):

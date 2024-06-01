@@ -13,6 +13,11 @@ func set_interaction_radius(radius):
 func interact(player):
 	emit_signal("interacted_with", player)
 
+func can_interact(player):
+	if get_parent().has_method("can_interact"):
+		return get_parent().can_interact(player)
+	return true
+
 func start_hover():
 	$Label.visible = true
 

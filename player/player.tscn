@@ -24,7 +24,7 @@ collision_mask = 128
 shape = SubResource( 2 )
 
 [node name="PlayerAnimation" parent="." instance=ExtResource( 1 )]
-position = Vector2( -40, -20 )
+position = Vector2( 0, -20 )
 scale = Vector2( 0.1, 0.1 )
 
 [node name="Body" parent="PlayerAnimation/Skeleton2D" index="0"]

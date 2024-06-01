@@ -28,12 +28,18 @@ _global_script_classes=[ {
 "class": "Player",
 "language": "GDScript",
 "path": "res://player/player.gd"
+}, {
+"base": "Item",
+"class": "Sickle",
+"language": "GDScript",
+"path": "res://item/sickle.gd"
 } ]
 _global_script_class_icons={
 "BUCKET": "",
 "Interactable": "",
 "Item": "",
-"Player": ""
+"Player": "",
+"Sickle": ""
 }
 
 [application]
