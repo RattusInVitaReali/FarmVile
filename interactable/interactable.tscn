@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://interactable/interactable.gd" type="Script" id=1]
-[ext_resource path="res://interactable/—Pngtree—metal bucket cartoon illustration_4729927.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 30.0
@@ -25,7 +24,3 @@ margin_bottom = -20.0
 text = "USE"
 align = 1
 valign = 1
-
-[node name="Sprite2D" type="Sprite" parent="."]
-scale = Vector2( 0.015, 0.015 )
-texture = ExtResource( 2 )
