@@ -50,6 +50,8 @@ func _on_InteractableScaner_area_entered(area):
 		current_interactable.start_hover()
 
 func _on_InteractableScaner_area_exited(area):
+	if current_interactable != area.get_parent():
+		return
 	if current_interactable != null:
 		current_interactable.stop_hover()
 		current_interactable = null
@@ -67,7 +69,7 @@ func interact():
 	if current_interactable == null:
 		return
 	current_interactable.interact(self)
-	if !current_interactable.can_interact(self):
+	if current_interactable != null and !current_interactable.can_interact(self):
 		current_interactable.stop_hover()
 		current_interactable = null
 

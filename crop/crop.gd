@@ -1,5 +1,7 @@
 extends Node2D
 
+const WheatScene = preload("res://crop/wheat.tscn")
+
 # Enum for crop states
 enum CropState { EMPTY, SEEDED, STAGE_1, STAGE_2, RIPE, WITHERED, CORRUPTED }
 
@@ -116,10 +118,10 @@ func _on_Interactable_interacted_with(player: Player):
 			crop_state = CropState.EMPTY
 			update_crop_sprite()
 			# player.item.use()
-#			drop_wheat()
+			drop_wheat()
 			return
 
-#func drop_wheat():
-#	var new_wheat = Wheat.new()
-#	new_wheat.position = position
-#	get_parent().add_child_below_node(self, new_wheat)
+func drop_wheat():
+	var new_wheat = WheatScene.instance()
+	new_wheat.position = position
+	get_parent().add_child_below_node(self, new_wheat)
