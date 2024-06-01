@@ -8,5 +8,5 @@ onready var world = $Viewports/ViewportContainer1/Viewport1/Main
 
 func _ready():
 	viewport2.world_2d = viewport1.world_2d
-	camera1.target = world.get_node("Player")
-	camera2.target = world.get_node("Player2")
+	camera1.target = world.get_node("YSort/Player")
+	camera2.target = world.get_node("YSort/Player2")

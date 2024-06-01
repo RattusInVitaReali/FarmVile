@@ -10,7 +10,7 @@ func shoot():
 	for body in bodies:
 		if body.global_position.distance_to(global_position) < closest.global_position.distance_to(global_position):
 			closest = body
-	look_at(closest.global_position)
+	$Sprite.look_at(closest.global_position)
 	var bullet = Bullet.instance()
 	add_child(bullet)
 	bullet.set_target(closest)

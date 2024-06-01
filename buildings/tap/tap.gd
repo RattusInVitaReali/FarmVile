@@ -6,13 +6,14 @@ onready var interactable: Interactable = $Interactable
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	anim.visible = false
-	interactable.set_interaction_radius(60)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
 
 func can_interact(player: Player):
+	if player.item == null:
+		return false
 	if player.item.item_type == Item.ItemType.BUCKET:
 		return true
 	return false

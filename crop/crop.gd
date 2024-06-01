@@ -32,7 +32,6 @@ func _ready():
 #	if day_manager:
 #		day_manager.connect("night_cycle", self, "_on_night_cycle")
 	update_crop_sprite()
-	interactable.set_interaction_radius(80)
 
 	get_tree().create_timer(0.5).connect("timeout", self, "_on_new_day")
 	get_tree().create_timer(1.2).connect("timeout", self, "_on_new_day")

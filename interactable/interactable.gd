@@ -7,8 +7,6 @@ export var hover_text = "E E E E"
 func _ready():
 	$Label.text = hover_text
 
-func set_interaction_radius(radius):
-	$InteractionRadius/CollisionShape2D.shape.radius = radius
 
 func interact(player):
 	emit_signal("interacted_with", player)

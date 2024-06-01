@@ -4,43 +4,48 @@
 [ext_resource path="res://item/bucket.tscn" type="PackedScene" id=2]
 [ext_resource path="res://buildings/tap/tap.tscn" type="PackedScene" id=3]
 [ext_resource path="res://player/player.tscn" type="PackedScene" id=4]
-[ext_resource path="res://bg.png" type="Texture" id=5]
+[ext_resource path="res://cela mapa.png" type="Texture" id=5]
 [ext_resource path="res://item/sickle.tscn" type="PackedScene" id=6]
 [ext_resource path="res://alien/alien.tscn" type="PackedScene" id=7]
 [ext_resource path="res://item/gun.tscn" type="PackedScene" id=8]
 
 [node name="Main" type="Node2D"]
 
-[node name="Bg" type="Sprite" parent="."]
-position = Vector2( 574, 293 )
+[node name="CelaMapa" type="Sprite" parent="."]
+position = Vector2( 988, 328 )
 texture = ExtResource( 5 )
 
-[node name="Player" parent="." instance=ExtResource( 4 )]
-position = Vector2( 382, 248 )
+[node name="YSort" type="YSort" parent="."]
 
-[node name="Player2" parent="." instance=ExtResource( 4 )]
+[node name="Alien" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 348, 656 )
+scale = Vector2( 2, 2 )
+
+[node name="Gun" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 215, 55 )
+
+[node name="Crop2" parent="YSort" groups=["crops"] instance=ExtResource( 1 )]
+position = Vector2( -67, 409 )
+scale = Vector2( 2, 2 )
+water_depletion_rate = 3.0
+
+[node name="Sickle" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 516, 298 )
+
+[node name="Tap" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 512, 78 )
+
+[node name="Bucket" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 369, 423 )
+
+[node name="Crop" parent="YSort" groups=["crops"] instance=ExtResource( 1 )]
+position = Vector2( -64, 119 )
+scale = Vector2( 2, 2 )
+water_depletion_rate = 3.0
+
+[node name="Player2" parent="YSort" instance=ExtResource( 4 )]
 position = Vector2( 101, 300 )
 player_id = 1
 
-[node name="Crop" parent="." groups=["crops"] instance=ExtResource( 1 )]
-position = Vector2( 238, 390 )
-water_depletion_rate = 3.0
-
-[node name="Alien" parent="Crop" instance=ExtResource( 7 )]
-position = Vector2( 55, 133 )
-
-[node name="Gun" parent="Crop" instance=ExtResource( 8 )]
-position = Vector2( -51, -240 )
-
-[node name="Bucket" parent="." instance=ExtResource( 2 )]
-position = Vector2( 369, 423 )
-
-[node name="Tap" parent="." instance=ExtResource( 3 )]
-position = Vector2( 512, 78 )
-
-[node name="Sickle" parent="." instance=ExtResource( 6 )]
-position = Vector2( 516, 298 )
-
-[node name="Crop2" parent="." groups=["crops"] instance=ExtResource( 1 )]
-position = Vector2( 101, 396 )
-water_depletion_rate = 3.0
+[node name="Player" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 382, 248 )

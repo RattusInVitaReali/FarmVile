@@ -10,6 +10,6 @@ item_type = 2
 max_water_level = 100
 water_level_decrement = 5
 
-[node name="Sprite" parent="." index="1"]
+[node name="Sprite" parent="." index="0"]
 scale = Vector2( 0.08, 0.08 )
 texture = ExtResource( 3 )

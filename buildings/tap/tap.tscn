@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://interactable/interactable.tscn" type="PackedScene" id=1]
 [ext_resource path="res://buildings/tap/tap.gd" type="Script" id=2]
@@ -14,6 +14,9 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 } ]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 20.0
 
 [node name="Tap" type="Node2D"]
 script = ExtResource( 2 )
@@ -33,5 +36,12 @@ frame = 1
 playing = true
 
 [node name="Interactable" parent="." instance=ExtResource( 1 )]
+position = Vector2( 8, 32 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 8, 32 )
+shape = SubResource( 2 )
 
 [connection signal="interacted_with" from="Interactable" to="." method="_on_Interactable_interacted_with"]
