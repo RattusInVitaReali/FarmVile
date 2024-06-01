@@ -19,3 +19,17 @@ func get_input():
 func _physics_process(delta):
 	get_input()
 	velocity = move_and_slide(velocity)
+
+var current_interactable : Interactable = null
+
+func _on_InteractableScaner_area_entered(area):
+	if current_interactable != null:
+		current_interactable.stop_hover()
+	current_interactable = area.get_parent()
+	current_interactable.start_hover()
+
+
+func _on_InteractableScaner_area_exited(area):
+	if current_interactable != null:
+		current_interactable.stop_hover()
+		current_interactable = null
