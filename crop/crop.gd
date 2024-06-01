@@ -86,13 +86,17 @@ func reset_crop():
 	update_crop_sprite()
 
 func can_interact(player: Player) -> bool:
-	if player.item != null:
-		if player.item.item_type == Item.ItemType.BUCKET:
-			return true
-		if player.item.item_type == Item.ItemType.SICKLE:
-			if crop_state == CropState.RIPE:
-				return true
+	if player.item == null:
+		return false
+	if player.item.item_type == Item.ItemType.BUCKET:
+		if crop_state == CropState.CORRUPTED or crop_state == CropState.EMPTY:
 			return false
+		if water_level > 97:
+			return false
+		return true
+	if player.item.item_type == Item.ItemType.SICKLE:
+		if crop_state == CropState.RIPE:
+			return true
 	return false
 
 
@@ -116,4 +120,6 @@ func _on_Interactable_interacted_with(player: Player):
 			return
 
 func drop_wheat():
-	pass
+	var new_wheat = Wheat.new()
+	new_wheat.position = position
+	get_parent().add_child_below_node(self, new_wheat)
