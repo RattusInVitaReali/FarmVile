@@ -54,4 +54,3 @@ script = ExtResource( 5 )
 
 [node name="Item" parent="." instance=ExtResource( 2 )]
 position = Vector2( 245, 307 )
-item_type = 0

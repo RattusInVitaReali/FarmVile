@@ -18,7 +18,7 @@ func get_input():
 		velocity.y += 1
 	if Input.is_action_pressed('ui_up_%s' % player_id):
 		velocity.y -= 1
-	if Input.is_action_pressed("ui_interact_%s" % player_id):
+	if Input.is_action_just_pressed("ui_interact_%s" % player_id):
 		if current_interactable != null:
 			current_interactable.interact(self)
 	# Make sure diagonal movement isn't faster

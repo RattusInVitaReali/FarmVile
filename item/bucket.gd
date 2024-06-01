@@ -11,11 +11,13 @@ func use():
 	if water_level > 0:
 		water_level -= water_level_decrement
 	update_sprite()
+	print("Water level: ", water_level)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	empty_texture = load("res://item/sprites/bucket_empty.png")
 	full_texture = load("res://item/sprites/bucket_full.png")
+	update_sprite()
 	
 func update_sprite():
 	if water_level <= 0:
