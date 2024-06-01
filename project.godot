@@ -15,6 +15,11 @@ _global_script_classes=[ {
 "path": "res://item/bucket.gd"
 }, {
 "base": "Node2D",
+"class": "Crop",
+"language": "GDScript",
+"path": "res://crop/crop.gd"
+}, {
+"base": "Node2D",
 "class": "Interactable",
 "language": "GDScript",
 "path": "res://interactable/interactable.gd"
@@ -41,6 +46,7 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "BUCKET": "",
+"Crop": "",
 "Interactable": "",
 "Item": "",
 "Player": "",
