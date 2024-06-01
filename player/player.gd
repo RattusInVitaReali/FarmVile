@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 var speed = 200  # speed in pixels/sec
 var velocity = Vector2.ZERO
+var item:Item
 
 export(int) var player_id = 0
 
@@ -41,11 +42,12 @@ func interact():
 		current_interactable 
 
 
-var item : Item = null
-
-func equip():
-	pass
-
-
 func drop():
 	pass
+
+func equip(new_item: Item):
+	if (item != null):
+		item.get_parent().remove_child(item)
+	item = new_item
+	add_child(item)
+	item.position(0,-30)
