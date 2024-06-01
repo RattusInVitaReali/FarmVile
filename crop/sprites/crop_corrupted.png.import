@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/crop_ripe.png-bac90274fd55d97ddddb2964d1573e7e.stex"
+path="res://.import/crop_corrupted.png-8d55c62e747d2d0acf22472fb3f75360.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://crop/crop_ripe.png"
-dest_files=[ "res://.import/crop_ripe.png-bac90274fd55d97ddddb2964d1573e7e.stex" ]
+source_file="res://crop/sprites/crop_corrupted.png"
+dest_files=[ "res://.import/crop_corrupted.png-8d55c62e747d2d0acf22472fb3f75360.stex" ]
 
 [params]
 

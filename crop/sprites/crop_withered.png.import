@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/crop_withered.png-8a8bda23785a3c4bd81a31c2206e6910.stex"
+path="res://.import/crop_withered.png-911385ffda5c7de2a66b7f0388d7f4dd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://crop/crop_withered.png"
-dest_files=[ "res://.import/crop_withered.png-8a8bda23785a3c4bd81a31c2206e6910.stex" ]
+source_file="res://crop/sprites/crop_withered.png"
+dest_files=[ "res://.import/crop_withered.png-911385ffda5c7de2a66b7f0388d7f4dd.stex" ]
 
 [params]
 
