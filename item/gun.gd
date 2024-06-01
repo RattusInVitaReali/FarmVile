@@ -1,6 +1,6 @@
 extends Item
 
-const Bullet = preload("res://item/Bullet.tscn")
+const Bullet = preload("res://item/bullet.tscn")
 
 func shoot():
 	var bodies = $Area2D.get_overlapping_bodies()

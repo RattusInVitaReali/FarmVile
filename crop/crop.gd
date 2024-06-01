@@ -47,6 +47,10 @@ func _process(delta):
 func _on_new_day():
 	advance_growth_stage()
 
+func destroy():
+	CropState.CORRUPTED
+	update_crop_sprite()
+
 # Function to advance the crop growth stage
 func advance_growth_stage():
 	match crop_state: 
