@@ -10,7 +10,7 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Item",
-"class": "Bucket",
+"class": "BUCKET",
 "language": "GDScript",
 "path": "res://item/bucket.gd"
 }, {
@@ -33,19 +33,13 @@ _global_script_classes=[ {
 "class": "Sickle",
 "language": "GDScript",
 "path": "res://item/sickle.gd"
-}, {
-"base": "Node2D",
-"class": "Wheat",
-"language": "GDScript",
-"path": "res://crop/wheat.gd"
 } ]
 _global_script_class_icons={
-"Bucket": "",
+"BUCKET": "",
 "Interactable": "",
 "Item": "",
 "Player": "",
-"Sickle": "",
-"Wheat": ""
+"Sickle": ""
 }
 
 [application]
