@@ -1,5 +1,5 @@
 extends Item
-class_name BUCKET
+class_name Bucket
 
 export var water_level = 100
 export(int) var water_level_decrement = 5
@@ -17,6 +17,7 @@ func _ready():
 	empty_texture = load("res://item/sprites/bucket_empty.png")
 	full_texture = load("res://item/sprites/bucket_full.png")
 	update_sprite()
+	item_type = ItemType.BUCKET
 	
 func update_sprite():
 	if water_level <= 0:
