@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://crop/crop.gd" type="Script" id=1]
 [ext_resource path="res://crop/crop_corrupted.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://crop/crop_1.png" type="Texture" id=5]
 [ext_resource path="res://crop/crop_2.png" type="Texture" id=6]
 [ext_resource path="res://crop/crop_ripe.png" type="Texture" id=7]
+[ext_resource path="res://interactable/interactable.tscn" type="PackedScene" id=8]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.32549, 0.682353, 1, 1 )
@@ -18,7 +19,6 @@ skew = Vector2( 0.5, 0 )
 
 [node name="Crop" type="Node2D"]
 script = ExtResource( 1 )
-water_level = null
 water_depletion_rate = 30.0
 crop_stages = [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ]
 empty_crop_sprite = ExtResource( 4 )
@@ -40,3 +40,8 @@ custom_colors/font_color = Color( 0, 0, 0, 0 )
 custom_styles/fg = SubResource( 1 )
 custom_styles/bg = SubResource( 2 )
 value = 30.0
+
+[node name="Interactable" parent="." instance=ExtResource( 8 )]
+position = Vector2( 30, 30 )
+
+[connection signal="interacted_with" from="Interactable" to="." method="_on_Interactable_interacted_with"]

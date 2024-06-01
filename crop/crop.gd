@@ -14,6 +14,7 @@ export(Texture) var corrupted_crop_sprite: Texture
 
 onready var sprite : Sprite= $Sprite
 onready var water_indicator: ProgressBar = $WaterIndicator
+onready var interactable: Interactable = $Interactable
 
 # Member variables
 var crop_state: int = CropState.EMPTY
@@ -25,6 +26,7 @@ func _ready():
 #	if day_manager:
 #		day_manager.connect("night_cycle", self, "_on_night_cycle")
 	update_crop_sprite()
+	interactable.set_interaction_radius(80)
 
 func _process(delta):
 	deplete_water(delta)
@@ -71,3 +73,7 @@ func reset_crop():
 	crop_state = CropState.EMPTY
 	water_level = 100.0
 	update_crop_sprite()
+
+
+func _on_Interactable_interacted_with():
+	pass # Replace with function body.
