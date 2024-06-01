@@ -23,3 +23,33 @@ position = Vector2( 382, 248 )
 [node name="Player2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 101, 300 )
 player_id = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ViewportContainer" type="ViewportContainer" parent="CanvasLayer/HBoxContainer"]
+margin_right = 508.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+
+[node name="Viewport" type="Viewport" parent="CanvasLayer/HBoxContainer/ViewportContainer"]
+
+[node name="Camera2D" type="Camera2D" parent="CanvasLayer/HBoxContainer/ViewportContainer/Viewport"]
+
+[node name="Panel" type="Panel" parent="CanvasLayer/HBoxContainer"]
+margin_left = 512.0
+margin_right = 522.0
+margin_bottom = 600.0
+
+[node name="ViewportContainer2" type="ViewportContainer" parent="CanvasLayer/HBoxContainer"]
+margin_left = 516.0
+margin_right = 1024.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+
+[node name="Viewport" type="Viewport" parent="CanvasLayer/HBoxContainer/ViewportContainer2"]
+
+[node name="Camera2D" type="Camera2D" parent="CanvasLayer/HBoxContainer/ViewportContainer2/Viewport"]
