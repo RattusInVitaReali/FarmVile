@@ -7,7 +7,10 @@ enum CropState { EMPTY, SEEDED, STAGE_1, STAGE_2, RIPE, WITHERED, CORRUPTED }
 export(float) var water_level: float = 100.0
 export(float) var water_depletion_rate: float = 1.0
 
-export(Array, Texture) var crop_stages: Array
+export(Texture) var seeded_crop_sprite: Texture
+export(Texture) var stage_1_crop_sprite: Texture
+export(Texture) var stage_2_crop_sprite: Texture
+export(Texture) var ripe_crop_sprite: Texture
 export(Texture) var empty_crop_sprite: Texture
 export(Texture) var withered_crop_sprite: Texture
 export(Texture) var corrupted_crop_sprite: Texture
@@ -28,12 +31,17 @@ func _ready():
 	update_crop_sprite()
 	interactable.set_interaction_radius(80)
 
+	get_tree().create_timer(0.5).connect("timeout", self, "_on_new_day")
+	get_tree().create_timer(1.2).connect("timeout", self, "_on_new_day")
+	get_tree().create_timer(2).connect("timeout", self, "_on_new_day")
+	get_tree().create_timer(3).connect("timeout", self, "_on_new_day")
+
 func _process(delta):
 	deplete_water(delta)
 	water_indicator.value = water_level
 
 # Function called on each night cycle
-func _on_night_cycle():
+func _on_new_day():
 	advance_growth_stage()
 
 # Function to advance the crop growth stage
@@ -61,12 +69,15 @@ func update_crop_sprite():
 		sprite.texture = withered_crop_sprite
 	elif crop_state == CropState.CORRUPTED:
 		sprite.texture = corrupted_crop_sprite
-	else:
-		var crop_sprites = crop_stages
-		if crop_sprites.size() > int(crop_state):
-			sprite.texture = crop_sprites[int(crop_state)]
-		else:
-			printerr("Crop state out of range: ", crop_state)
+	elif crop_state == CropState.SEEDED:
+		sprite.texture = seeded_crop_sprite
+	elif crop_state == CropState.STAGE_1:
+		sprite.texture = stage_1_crop_sprite
+	elif crop_state == CropState.STAGE_2:
+		sprite.texture = stage_2_crop_sprite
+	elif crop_state == CropState.RIPE:
+		sprite.texture = ripe_crop_sprite
+
 
 # Function to reset crop state and water level
 func reset_crop():

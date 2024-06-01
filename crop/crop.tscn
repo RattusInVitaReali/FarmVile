@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://crop/crop.gd" type="Script" id=1]
 [ext_resource path="res://crop/crop_corrupted.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://crop/crop_2.png" type="Texture" id=6]
 [ext_resource path="res://crop/crop_ripe.png" type="Texture" id=7]
 [ext_resource path="res://interactable/interactable.tscn" type="PackedScene" id=8]
+[ext_resource path="res://crop/crop_seeded.png" type="Texture" id=9]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.32549, 0.682353, 1, 1 )
@@ -19,8 +20,11 @@ skew = Vector2( 0.5, 0 )
 
 [node name="Crop" type="Node2D"]
 script = ExtResource( 1 )
-water_depletion_rate = 30.0
-crop_stages = [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ]
+water_depletion_rate = 20.0
+seeded_crop_sprite = ExtResource( 9 )
+stage_1_crop_sprite = ExtResource( 5 )
+stage_2_crop_sprite = ExtResource( 6 )
+ripe_crop_sprite = ExtResource( 7 )
 empty_crop_sprite = ExtResource( 4 )
 withered_crop_sprite = ExtResource( 3 )
 corrupted_crop_sprite = ExtResource( 2 )
