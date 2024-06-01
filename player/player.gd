@@ -23,6 +23,8 @@ func get_input():
 		velocity.y -= 1
 	if Input.is_action_just_pressed("ui_interact_%s" % player_id):
 		interact()
+	if Input.is_action_just_pressed("ui_drop_%s" % player_id):
+		drop()
 	# Make sure diagonal movement isn't faster
 	velocity = velocity.normalized() * speed
 	if $PlayerAnimation/AnimationPlayer.current_animation == "Idle" and velocity != Vector2.ZERO:
@@ -64,9 +66,6 @@ func interact():
 		current_interactable.interact(self)
 
 func drop():
-	pass
-
-func equip(new_item: Item):
 	if (item != null):
 		item.get_parent().remove_child(item)
 		get_parent().add_child(item)
@@ -75,6 +74,9 @@ func equip(new_item: Item):
 		item.position.x += 30
 		item.position.y += 20
 		item.enable()
+
+func equip(new_item: Item):
+	drop()
 	item = new_item
 	item.get_parent().remove_child(item)
 	add_child(item)
