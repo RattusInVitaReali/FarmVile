@@ -14,13 +14,11 @@ func _ready():
 
 func can_interact(player: Player):
 	if player.item.item_type == Item.ItemType.BUCKET:
-		print('Can interact')
 		return true
 	return false
 	
 
 func _on_Interactable_interacted_with(player: Player):
-	print('Tap: Interacted with', player.item)
 	if player.item.has_method('fill'):
 		player.item.fill()
 		anim.visible = true
