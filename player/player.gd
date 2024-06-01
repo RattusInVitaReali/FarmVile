@@ -19,8 +19,7 @@ func get_input():
 	if Input.is_action_pressed('ui_up_%s' % player_id):
 		velocity.y -= 1
 	if Input.is_action_just_pressed("ui_interact_%s" % player_id):
-		if current_interactable != null:
-			current_interactable.interact(self)
+		interact()
 	# Make sure diagonal movement isn't faster
 	velocity = velocity.normalized() * speed
 
@@ -40,10 +39,18 @@ func _on_InteractableScaner_area_exited(area):
 	if current_interactable != null:
 		current_interactable.stop_hover()
 		current_interactable = null
+	var areas = $InteractableScaner.get_overlapping_areas()
+	var closest = null
+	for a in areas:
+		if closest == null or a.position.distance_to(position) < closest.position.distance_to(position):
+			closest = a
+	if closest != null:
+		current_interactable = closest.get_parent()
+		current_interactable.start_hover()
 
 func interact():
 	if current_interactable != null:
-		current_interactable 
+		current_interactable.interact(self)
 
 func drop():
 	pass
