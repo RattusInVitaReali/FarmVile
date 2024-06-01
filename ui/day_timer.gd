@@ -1,4 +1,4 @@
-extends HBoxContainer
+extends VBoxContainer
 
 onready var game_manager : GameManager= get_node("/root/GameManager")
 onready var animator : AnimationPlayer = $AnimateIcon
