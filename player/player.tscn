@@ -29,7 +29,6 @@ collision_layer = 0
 collision_mask = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableScaner"]
-position = Vector2( 0, 30 )
 shape = SubResource( 2 )
 
 [connection signal="area_entered" from="InteractableScaner" to="." method="_on_InteractableScaner_area_entered"]

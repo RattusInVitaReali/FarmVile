@@ -3,15 +3,17 @@ extends KinematicBody2D
 var speed = 200  # speed in pixels/sec
 var velocity = Vector2.ZERO
 
+export(int) var player_id = 0
+
 func get_input():
 	velocity = Vector2.ZERO
-	if Input.is_action_pressed('ui_right'):
+	if Input.is_action_pressed('ui_right_%s' % player_id):
 		velocity.x += 1
-	if Input.is_action_pressed('ui_left'):
+	if Input.is_action_pressed('ui_left_%s' % player_id):
 		velocity.x -= 1
-	if Input.is_action_pressed('ui_down'):
+	if Input.is_action_pressed('ui_down_%s' % player_id):
 		velocity.y += 1
-	if Input.is_action_pressed('ui_up'):
+	if Input.is_action_pressed('ui_up_%s' % player_id):
 		velocity.y -= 1
 	# Make sure diagonal movement isn't faster
 	velocity = velocity.normalized() * speed
@@ -33,3 +35,17 @@ func _on_InteractableScaner_area_exited(area):
 	if current_interactable != null:
 		current_interactable.stop_hover()
 		current_interactable = null
+
+func interact():
+	if current_interactable != null:
+		current_interactable 
+
+
+var item : Item = null
+
+func equip():
+	pass
+
+
+func drop():
+	pass
