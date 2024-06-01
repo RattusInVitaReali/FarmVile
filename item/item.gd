@@ -20,3 +20,9 @@ func _ready():
 
 func _on_Interactable_interacted_with(player):
 	player.equip(self)
+
+func enable():
+	$Interactable.enable()
+	
+func disable():
+	$Interactable.disable()
