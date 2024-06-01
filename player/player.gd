@@ -25,6 +25,8 @@ func get_input():
 		interact()
 	if Input.is_action_just_pressed("ui_drop_%s" % player_id):
 		drop()
+	if Input.is_action_just_pressed("ui_shoot"):
+		shoot()
 	# Make sure diagonal movement isn't faster
 	velocity = velocity.normalized() * speed
 	if $PlayerAnimation/AnimationPlayer.current_animation == "Idle" and velocity != Vector2.ZERO:
@@ -82,6 +84,12 @@ func drop():
 		item.position.x += 30
 		item.position.y += 20
 		item.enable()
+
+func shoot():
+	if item == null:
+		return
+	if item.item_type == Item.ItemType.GUN:
+		item.shoot()
 
 func equip(new_item: Item):
 	drop()

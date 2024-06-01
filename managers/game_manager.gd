@@ -29,8 +29,8 @@ func _ready():
 
 	day_timer.connect("timeout", self, "_on_day_timer_timeout")
 	night_timer.connect("timeout", self, "_on_night_timer_timeout")
-
-	start_day_cycle()
+	
+	day_timer.start()
 
 # Function to start the day cycle
 func start_day_cycle():

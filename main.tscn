@@ -1,9 +1,81 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://world/world.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ui/ui.tscn" type="PackedScene" id=2]
+[ext_resource path="res://ui/day_night_animator.gd" type="Script" id=3]
 [ext_resource path="res://main.gd" type="Script" id=4]
 [ext_resource path="res://camera.gd" type="Script" id=5]
+[ext_resource path="res://ui/day_night.gd" type="Script" id=6]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+uniform float time_of_day : hint_range(0.0, 1.0); // 0.0 = night, 1.0 = day
+
+void fragment() {
+    // Calculate the alpha value based on the time_of_day
+    // At night (0.0), we want some darkness, hence alpha closer to 0.8 (semi-transparent black)
+    // During the day (1.0), we want full transparency
+    float alpha = 1.0 - time_of_day;
+
+    // Set color to black with calculated alpha
+    vec4 color = vec4(0.0, 0.0, 0.0, alpha * 0.5); // The maximum alpha value at night is 0.8 for visible darkening
+
+    // Output the color; blend it over what's already rendered below
+    COLOR = color;
+}
+"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+shader_param/time_of_day = 0.0
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("DayNightShader:material:shader_param/time_of_day")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "to_day"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("DayNightShader:material:shader_param/time_of_day")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "to_night"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("DayNightShader:material:shader_param/time_of_day")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.801, 0.0 ]
+}
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource( 4 )
@@ -52,7 +124,22 @@ position = Vector2( 521, 0 )
 current = true
 script = ExtResource( 5 )
 
-[node name="UICanvas" type="CanvasLayer" parent="."]
+[node name="DayNightShaderCanvasLayer" type="CanvasLayer" parent="."]
 layer = 2
+
+[node name="DayNightShader" type="ColorRect" parent="DayNightShaderCanvasLayer"]
+material = SubResource( 2 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 6 )
+
+[node name="DayNightAnimator" type="AnimationPlayer" parent="DayNightShaderCanvasLayer"]
+anims/RESET = SubResource( 3 )
+anims/to_day = SubResource( 4 )
+anims/to_night = SubResource( 5 )
+script = ExtResource( 3 )
+
+[node name="UICanvas" type="CanvasLayer" parent="."]
+layer = 3
 
 [node name="UI" parent="UICanvas" instance=ExtResource( 2 )]
