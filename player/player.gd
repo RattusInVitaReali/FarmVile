@@ -8,6 +8,9 @@ var current_interactable : Interactable = null
 
 export(int) var player_id = 0
 
+func _ready():
+	$PlayerAnimation/AnimationPlayer.play("Idle")
+
 func get_input():
 	velocity = Vector2.ZERO
 	if Input.is_action_pressed('ui_right_%s' % player_id):
@@ -22,6 +25,14 @@ func get_input():
 		interact()
 	# Make sure diagonal movement isn't faster
 	velocity = velocity.normalized() * speed
+	if $PlayerAnimation/AnimationPlayer.current_animation == "Idle" and velocity != Vector2.ZERO:
+		$PlayerAnimation/AnimationPlayer.play("Walk")
+	if $PlayerAnimation/AnimationPlayer.current_animation == "Walk" and velocity == Vector2.ZERO:
+		$PlayerAnimation/AnimationPlayer.play("Idle")
+	if velocity.x > 0:
+		$PlayerAnimation.scale = Vector2(-0.1, 0.1)
+	elif velocity.x < 0:
+		$PlayerAnimation.scale = Vector2(0.1, 0.1)
 
 func _physics_process(delta):
 	get_input()
