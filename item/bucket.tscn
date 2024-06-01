@@ -7,7 +7,7 @@
 [node name="Bucket" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 item_type = 2
-water_level = 100
+max_water_level = 100
 water_level_decrement = 5
 
 [node name="Sprite" parent="." index="1"]

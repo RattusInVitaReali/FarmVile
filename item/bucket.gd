@@ -28,5 +28,6 @@ func update_sprite():
 		item_texture = full_texture
 		
 func fill():
+	print("Filling bucket")
 	water_level = max_water_level
 	update_sprite()
