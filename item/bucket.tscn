@@ -1,11 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://item/item.tscn" type="PackedScene" id=1]
 [ext_resource path="res://item/bucket.gd" type="Script" id=2]
+[ext_resource path="res://item/sprites/bucket_empty.png" type="Texture" id=3]
 
 [node name="Item" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
-item_type = 0
-item_texture = null
+item_texture = ExtResource( 3 )
 water_level = 100
 water_level_decrement = 5
