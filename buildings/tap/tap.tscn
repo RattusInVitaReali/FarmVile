@@ -24,11 +24,10 @@ scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 5 )
 
 [node name="Animation" type="AnimatedSprite" parent="Sprite"]
-visible = false
+show_behind_parent = true
 position = Vector2( -149.718, 200.211 )
 rotation = 0.0157042
 scale = Vector2( 2.5, 2.5 )
-z_index = -1
 frames = SubResource( 1 )
 frame = 1
 playing = true

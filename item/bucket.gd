@@ -17,17 +17,16 @@ func use():
 func _ready():
 	empty_texture = load("res://item/sprites/bucket_empty.png")
 	full_texture = load("res://item/sprites/bucket_full.png")
-	update_sprite()
 	item_type = ItemType.BUCKET
 	water_level = max_water_level
-	
+	update_sprite()
+
 func update_sprite():
 	if water_level <= 0:
-		item_texture = empty_texture
+		sprite.texture = empty_texture
 	else:
-		item_texture = full_texture
+		sprite.texture = full_texture
 		
 func fill():
-	print("Filling bucket")
 	water_level = max_water_level
 	update_sprite()

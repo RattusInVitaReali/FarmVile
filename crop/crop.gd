@@ -100,7 +100,10 @@ func _on_Interactable_interacted_with(player: Player):
 	if player.item == null:
 		return
 	if player.item.item_type == Item.ItemType.BUCKET:
-		water_level = 100
+		if player.item.water_level == 0:
+			return
+		print("Watering crop, water level: ", water_level)
+		water_level = min(100, player.item.water_level_decrement + water_level)
 		update_crop_sprite()
 		player.item.use()
 		return

@@ -20,11 +20,11 @@ func can_interact(player: Player):
 	
 
 func _on_Interactable_interacted_with(player: Player):
-	print('Interacted with', player.item)
+	print('Tap: Interacted with', player.item)
 	if player.item.has_method('fill'):
 		player.item.fill()
 		anim.visible = true
-		get_tree().create_timer(2.0).connect('timeout', self, 'hide_anim')
+		get_tree().create_timer(0.7).connect('timeout', self, 'hide_anim')
 
 func hide_anim():
 	anim.visible = false

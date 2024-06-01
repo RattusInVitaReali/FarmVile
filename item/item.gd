@@ -6,6 +6,8 @@ enum ItemType {SICKLE, GUN, BUCKET}
 export(ItemType) var item_type
 export(Texture) var item_texture
 
+onready var sprite: Sprite = $Sprite
+
 func use():
 	pass
 
