@@ -18,3 +18,9 @@ func start_hover():
 
 func stop_hover():
 	$Label.visible = false
+
+func enable():
+	$InteractionRadius.monitorable = true
+	
+func disable():
+	$InteractionRadius.monitorable = false
