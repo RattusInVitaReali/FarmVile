@@ -15,7 +15,6 @@ position = Vector2( 227, 239 )
 
 [node name="Item2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 306, 358 )
-item_type = 2
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 382, 248 )
@@ -36,12 +35,14 @@ margin_bottom = 600.0
 size_flags_horizontal = 3
 
 [node name="Viewport" type="Viewport" parent="CanvasLayer/HBoxContainer/ViewportContainer"]
+handle_input_locally = false
+render_target_update_mode = 3
 
 [node name="Camera2D" type="Camera2D" parent="CanvasLayer/HBoxContainer/ViewportContainer/Viewport"]
 
 [node name="Panel" type="Panel" parent="CanvasLayer/HBoxContainer"]
 margin_left = 512.0
-margin_right = 522.0
+margin_right = 512.0
 margin_bottom = 600.0
 
 [node name="ViewportContainer2" type="ViewportContainer" parent="CanvasLayer/HBoxContainer"]
@@ -51,5 +52,7 @@ margin_bottom = 600.0
 size_flags_horizontal = 3
 
 [node name="Viewport" type="Viewport" parent="CanvasLayer/HBoxContainer/ViewportContainer2"]
+handle_input_locally = false
+render_target_update_mode = 3
 
 [node name="Camera2D" type="Camera2D" parent="CanvasLayer/HBoxContainer/ViewportContainer2/Viewport"]

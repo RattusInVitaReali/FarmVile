@@ -53,6 +53,9 @@ func equip(new_item: Item):
 		item.get_parent().remove_child(item)
 		get_parent().add_child(item)
 		item.position = position
+		## da ne bi bilo u centru, vec ispred player-a
+		item.position.x += 30
+		item.position.y += 20
 	item = new_item
 	item.get_parent().remove_child(item)
 	add_child(item)
