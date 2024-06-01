@@ -30,15 +30,14 @@ withered_crop_sprite = ExtResource( 3 )
 corrupted_crop_sprite = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 30, 30 )
-scale = Vector2( 0.3, 0.3 )
+scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 4 )
 
 [node name="WaterIndicator" type="ProgressBar" parent="."]
-margin_left = 1.0
-margin_top = 62.0
-margin_right = 61.0
-margin_bottom = 76.0
+margin_left = -29.0
+margin_top = 40.0
+margin_right = 31.0
+margin_bottom = 54.0
 rect_scale = Vector2( 1, 0.6 )
 custom_colors/font_color = Color( 0, 0, 0, 0 )
 custom_styles/fg = SubResource( 1 )
@@ -46,6 +45,5 @@ custom_styles/bg = SubResource( 2 )
 value = 30.0
 
 [node name="Interactable" parent="." instance=ExtResource( 8 )]
-position = Vector2( 30, 30 )
 
 [connection signal="interacted_with" from="Interactable" to="." method="_on_Interactable_interacted_with"]

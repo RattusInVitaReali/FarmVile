@@ -28,12 +28,24 @@ _global_script_classes=[ {
 "class": "Player",
 "language": "GDScript",
 "path": "res://player/player.gd"
+}, {
+"base": "Item",
+"class": "Sickle",
+"language": "GDScript",
+"path": "res://item/sickle.gd"
+}, {
+"base": "Node2D",
+"class": "Wheat",
+"language": "GDScript",
+"path": "res://crop/wheat.gd"
 } ]
 _global_script_class_icons={
 "Bucket": "",
 "Interactable": "",
 "Item": "",
-"Player": ""
+"Player": "",
+"Sickle": "",
+"Wheat": ""
 }
 
 [application]
