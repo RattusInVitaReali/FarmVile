@@ -90,7 +90,7 @@ func shoot():
 	if item == null:
 		return
 	if item.item_type == Item.ItemType.GUN:
-		item.shoot()
+		item.shoot(self)
 
 func equip(new_item: Item):
 	drop()

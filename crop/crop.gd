@@ -48,7 +48,7 @@ func _on_new_day():
 	advance_growth_stage()
 
 func destroy():
-	CropState.CORRUPTED
+	crop_state = CropState.CORRUPTED
 	update_crop_sprite()
 
 # Function to advance the crop growth stage

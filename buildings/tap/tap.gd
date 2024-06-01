@@ -13,6 +13,8 @@ func _ready():
 #	pass
 
 func can_interact(player: Player):
+	if player.item == null:
+		return
 	if player.item.item_type == Item.ItemType.BUCKET:
 		return true
 	return false
