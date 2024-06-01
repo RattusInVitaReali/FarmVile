@@ -88,3 +88,9 @@ func reset_crop():
 
 func _on_Interactable_interacted_with():
 	pass # Replace with function body.
+
+func can_interact(player: Player) -> bool:
+	if player.item != null:
+		if player.item.item:
+			return true
+	return true
