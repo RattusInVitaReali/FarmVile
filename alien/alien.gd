@@ -16,6 +16,8 @@ var hp = max_hp
 
 var target : Crop
 
+var is_dead: bool = false
+
 func _ready():
 	var crops = get_tree().get_nodes_in_group("crops")
 	print(crops)
@@ -52,6 +54,7 @@ func take_damage():
 		die()
 
 func die():
+	is_dead = true
 	queue_free()
 
 

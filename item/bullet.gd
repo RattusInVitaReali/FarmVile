@@ -8,7 +8,7 @@ func set_target(t: Alien):
 	target = t
 
 func _physics_process(delta):
-	if target == null or !is_instance_valid(target):
+	if target == null or !is_instance_valid(target) or target.is_dead:
 		queue_free()
 		return
 	look_at(target.global_position)
