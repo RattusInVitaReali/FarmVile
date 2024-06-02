@@ -51,6 +51,7 @@ func _on_new_day():
 
 func destroy():
 	$Target.visible = false
+	remove_from_group("crops")
 	crop_state = CropState.CORRUPTED
 	update_crop_sprite()
 

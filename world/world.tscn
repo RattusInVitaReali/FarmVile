@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://crop/crop.tscn" type="PackedScene" id=1]
 [ext_resource path="res://item/bucket.tscn" type="PackedScene" id=2]
@@ -8,7 +8,7 @@
 [ext_resource path="res://item/sickle.tscn" type="PackedScene" id=6]
 [ext_resource path="res://alien/alien.tscn" type="PackedScene" id=7]
 [ext_resource path="res://item/gun.tscn" type="PackedScene" id=8]
-[ext_resource path="res://plot base color.png" type="Texture" id=9]
+[ext_resource path="res://world/plots fence.png" type="Texture" id=9]
 [ext_resource path="res://buildings/barn/barn.tscn" type="PackedScene" id=10]
 [ext_resource path="res://buildings/fences/fence.tscn" type="PackedScene" id=11]
 [ext_resource path="res://buildings/fences/fence2.tscn" type="PackedScene" id=12]
@@ -16,6 +16,7 @@
 [ext_resource path="res://item/tree2 (2).png" type="Texture" id=14]
 [ext_resource path="res://world/world.gd" type="Script" id=15]
 [ext_resource path="res://item/seed_bucket.tscn" type="PackedScene" id=16]
+[ext_resource path="res://zbunje.png" type="Texture" id=17]
 
 [node name="Main" type="Node2D"]
 position = Vector2( -42, -8 )
@@ -25,17 +26,17 @@ script = ExtResource( 15 )
 texture = ExtResource( 5 )
 
 [node name="PlotBaseColor" type="Sprite" parent="CelaMapa"]
-position = Vector2( -629, 259 )
+position = Vector2( -636, 300 )
 scale = Vector2( 0.35, 0.35 )
 texture = ExtResource( 9 )
 
 [node name="PlotBaseColor2" type="Sprite" parent="CelaMapa"]
-position = Vector2( 66, 249 )
+position = Vector2( 75, 284 )
 scale = Vector2( 0.35, 0.35 )
 texture = ExtResource( 9 )
 
 [node name="PlotBaseColor3" type="Sprite" parent="CelaMapa"]
-position = Vector2( 59, -374 )
+position = Vector2( 52, -351 )
 scale = Vector2( 0.35, 0.35 )
 texture = ExtResource( 9 )
 
@@ -117,6 +118,130 @@ water_depletion_rate = 3.0
 [node name="Crop9" parent="YSort/Plots1" groups=["crops"] instance=ExtResource( 1 )]
 position = Vector2( 213, 382 )
 scale = Vector2( 2, 2 )
+locked = true
+water_depletion_rate = 3.0
+
+[node name="Plots2" type="YSort" parent="YSort"]
+position = Vector2( -704, 20 )
+
+[node name="Crop1" parent="YSort/Plots2" groups=["crops"] instance=ExtResource( 1 )]
+position = Vector2( -64, 119 )
+scale = Vector2( 2, 2 )
+cost = 2
+water_depletion_rate = 3.0
+
+[node name="Crop2" parent="YSort/Plots2" groups=["crops"] instance=ExtResource( 1 )]
+position = Vector2( -69, 382 )
+scale = Vector2( 2, 2 )
+cost = 2
+locked = true
+water_depletion_rate = 3.0
+
+[node name="Crop3" parent="YSort/Plots2" groups=["crops"] instance=ExtResource( 1 )]
+position = Vector2( 69, 125 )
+scale = Vector2( 2, 2 )
+cost = 2
+water_depletion_rate = 3.0
+
+[node name="Crop4" parent="YSort/Plots2" groups=["crops"] instance=ExtResource( 1 )]
+position = Vector2( 209, 128 )
+scale = Vector2( 2, 2 )
+cost = 2
+locked = true
+water_depletion_rate = 3.0
+
+[node name="Crop5" parent="YSort/Plots2" groups=["crops"] instance=ExtResource( 1 )]
+position = Vector2( -67, 258 )
+scale = Vector2( 2, 2 )
+cost = 2
+water_depletion_rate = 3.0
+
+[node name="Crop6" parent="YSort/Plots2" groups=["crops"] instance=ExtResource( 1 )]
+position = Vector2( 73, 259 )
+scale = Vector2( 2, 2 )
+cost = 2
+water_depletion_rate = 3.0
+
+[node name="Crop7" parent="YSort/Plots2" groups=["crops"] instance=ExtResource( 1 )]
+position = Vector2( 210, 260 )
+scale = Vector2( 2, 2 )
+cost = 2
+locked = true
+water_depletion_rate = 3.0
+
+[node name="Crop8" parent="YSort/Plots2" groups=["crops"] instance=ExtResource( 1 )]
+position = Vector2( 75, 381 )
+scale = Vector2( 2, 2 )
+cost = 2
+locked = true
+water_depletion_rate = 3.0
+
+[node name="Crop9" parent="YSort/Plots2" groups=["crops"] instance=ExtResource( 1 )]
+position = Vector2( 213, 382 )
+scale = Vector2( 2, 2 )
+cost = 2
+locked = true
+water_depletion_rate = 3.0
+
+[node name="Plots3" type="YSort" parent="YSort"]
+position = Vector2( -16, -625 )
+
+[node name="Crop1" parent="YSort/Plots3" groups=["crops"] instance=ExtResource( 1 )]
+position = Vector2( -64, 119 )
+scale = Vector2( 2, 2 )
+cost = 3
+water_depletion_rate = 3.0
+
+[node name="Crop2" parent="YSort/Plots3" groups=["crops"] instance=ExtResource( 1 )]
+position = Vector2( -69, 382 )
+scale = Vector2( 2, 2 )
+cost = 3
+locked = true
+water_depletion_rate = 3.0
+
+[node name="Crop3" parent="YSort/Plots3" groups=["crops"] instance=ExtResource( 1 )]
+position = Vector2( 69, 125 )
+scale = Vector2( 2, 2 )
+cost = 3
+water_depletion_rate = 3.0
+
+[node name="Crop4" parent="YSort/Plots3" groups=["crops"] instance=ExtResource( 1 )]
+position = Vector2( 209, 128 )
+scale = Vector2( 2, 2 )
+cost = 3
+locked = true
+water_depletion_rate = 3.0
+
+[node name="Crop5" parent="YSort/Plots3" groups=["crops"] instance=ExtResource( 1 )]
+position = Vector2( -67, 258 )
+scale = Vector2( 2, 2 )
+cost = 3
+water_depletion_rate = 3.0
+
+[node name="Crop6" parent="YSort/Plots3" groups=["crops"] instance=ExtResource( 1 )]
+position = Vector2( 73, 259 )
+scale = Vector2( 2, 2 )
+cost = 3
+water_depletion_rate = 3.0
+
+[node name="Crop7" parent="YSort/Plots3" groups=["crops"] instance=ExtResource( 1 )]
+position = Vector2( 210, 260 )
+scale = Vector2( 2, 2 )
+cost = 3
+locked = true
+water_depletion_rate = 3.0
+
+[node name="Crop8" parent="YSort/Plots3" groups=["crops"] instance=ExtResource( 1 )]
+position = Vector2( 75, 381 )
+scale = Vector2( 2, 2 )
+cost = 3
+locked = true
+water_depletion_rate = 3.0
+
+[node name="Crop9" parent="YSort/Plots3" groups=["crops"] instance=ExtResource( 1 )]
+position = Vector2( 213, 382 )
+scale = Vector2( 2, 2 )
+cost = 3
 locked = true
 water_depletion_rate = 3.0
 
@@ -248,5 +373,12 @@ position = Vector2( -1040, -154 )
 position = Vector2( -105, -47 )
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Zbunje" type="Sprite" parent="Node2D"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
