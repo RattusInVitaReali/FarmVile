@@ -1,7 +1,7 @@
 extends Node2D
 class_name Item
 
-enum ItemType {SICKLE, GUN, BUCKET, WHEAT}
+enum ItemType {SICKLE, GUN, BUCKET, WHEAT, SEED}
 
 export(ItemType) var item_type
 export(Texture) var item_texture
