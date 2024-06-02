@@ -566,7 +566,7 @@ texture = ExtResource( 18 )
 position = Vector2( -1466, -680 )
 
 [node name="Gun" parent="YSort" instance=ExtResource( 8 )]
-position = Vector2( -776, -347 )
+position = Vector2( -462, -152 )
 
 [node name="Gun2" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( -567, -536 )

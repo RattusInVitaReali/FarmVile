@@ -6,10 +6,19 @@ var velocity = Vector2.ZERO
 var item:Item
 var current_interactable : Interactable = null
 
+onready var aplayer = $PlayerAnimation/AnimationPlayer
+onready var skin = $PlayerAnimation
+
 export(int) var player_id = 0
 
 func _ready():
-	$PlayerAnimation/AnimationPlayer.play("Idle")
+	if player_id == 1:
+		$PlayerAnimation.queue_free()
+		aplayer = $FemaleAnimation/AnimationPlayer
+		skin = $FemaleAnimation
+	else:
+		$FemaleAnimation.queue_free()
+	aplayer.play("Idle")
 
 func get_input():
 	velocity = Vector2.ZERO
@@ -41,12 +50,12 @@ func get_input():
 			anim_name = "Walk with item"
 		else:
 			anim_name = "Walk"
-	if $PlayerAnimation/AnimationPlayer.current_animation != anim_name:
-		$PlayerAnimation/AnimationPlayer.play(anim_name)
+	if aplayer.current_animation != anim_name:
+		aplayer.play(anim_name)
 	if velocity.x > 0:
-		$PlayerAnimation.scale = Vector2(-0.1, 0.1)
+		skin.scale = Vector2(-0.1, 0.1)
 	elif velocity.x < 0:
-		$PlayerAnimation.scale = Vector2(0.1, 0.1)
+		skin.scale = Vector2(0.1, 0.1)
 
 func _physics_process(delta):
 	get_input()

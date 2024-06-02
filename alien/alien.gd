@@ -57,6 +57,11 @@ func take_damage():
 func die():
 	target.get_node("Target").visible = false
 	is_dead = true
+	var dp = $DeathP
+	remove_child(dp)
+	get_parent().add_child(dp)
+	dp.global_position = global_position
+	dp.emitting = true
 	queue_free()
 
 
