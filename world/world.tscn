@@ -492,46 +492,46 @@ position = Vector2( 90, -17 )
 [node name="Crop1" parent="YSort/Plots1" groups=["crops"] instance=ExtResource( 1 )]
 position = Vector2( -64, 119 )
 scale = Vector2( 2, 2 )
-water_depletion_rate = 3.0
+water_depletion_rate = 1.5
 
 [node name="Crop2" parent="YSort/Plots1" groups=["crops"] instance=ExtResource( 1 )]
 position = Vector2( -69, 382 )
 scale = Vector2( 2, 2 )
 locked = true
-water_depletion_rate = 3.0
+water_depletion_rate = 1.5
 
 [node name="Crop3" parent="YSort/Plots1" groups=["crops"] instance=ExtResource( 1 )]
 position = Vector2( 69, 125 )
 scale = Vector2( 2, 2 )
-water_depletion_rate = 3.0
+water_depletion_rate = 1.5
 
 [node name="Crop4" parent="YSort/Plots1" groups=["crops"] instance=ExtResource( 1 )]
 position = Vector2( 209, 128 )
 scale = Vector2( 2, 2 )
 locked = true
-water_depletion_rate = 3.0
+water_depletion_rate = 1.5
 
 [node name="Crop5" parent="YSort/Plots1" groups=["crops"] instance=ExtResource( 1 )]
 position = Vector2( -67, 258 )
 scale = Vector2( 2, 2 )
-water_depletion_rate = 3.0
+water_depletion_rate = 1.5
 
 [node name="Crop6" parent="YSort/Plots1" groups=["crops"] instance=ExtResource( 1 )]
 position = Vector2( 73, 259 )
 scale = Vector2( 2, 2 )
-water_depletion_rate = 3.0
+water_depletion_rate = 1.5
 
 [node name="Crop7" parent="YSort/Plots1" groups=["crops"] instance=ExtResource( 1 )]
 position = Vector2( 210, 260 )
 scale = Vector2( 2, 2 )
 locked = true
-water_depletion_rate = 3.0
+water_depletion_rate = 1.5
 
 [node name="Crop8" parent="YSort/Plots1" groups=["crops"] instance=ExtResource( 1 )]
 position = Vector2( 75, 381 )
 scale = Vector2( 2, 2 )
 locked = true
-water_depletion_rate = 3.0
+water_depletion_rate = 1.5
 
 [node name="Crop9" parent="YSort/Plots1" groups=["crops"] instance=ExtResource( 1 )]
 position = Vector2( 213, 382 )
@@ -546,60 +546,60 @@ position = Vector2( -704, 20 )
 position = Vector2( -64, 119 )
 scale = Vector2( 2, 2 )
 cost = 2
-water_depletion_rate = 3.0
+water_depletion_rate = 1.5
 
 [node name="Crop2" parent="YSort/Plots2" groups=["crops"] instance=ExtResource( 1 )]
 position = Vector2( -69, 382 )
 scale = Vector2( 2, 2 )
 cost = 2
 locked = true
-water_depletion_rate = 3.0
+water_depletion_rate = 1.5
 
 [node name="Crop3" parent="YSort/Plots2" groups=["crops"] instance=ExtResource( 1 )]
 position = Vector2( 69, 125 )
 scale = Vector2( 2, 2 )
 cost = 2
-water_depletion_rate = 3.0
+water_depletion_rate = 1.5
 
 [node name="Crop4" parent="YSort/Plots2" groups=["crops"] instance=ExtResource( 1 )]
 position = Vector2( 209, 128 )
 scale = Vector2( 2, 2 )
 cost = 2
 locked = true
-water_depletion_rate = 3.0
+water_depletion_rate = 1.5
 
 [node name="Crop5" parent="YSort/Plots2" groups=["crops"] instance=ExtResource( 1 )]
 position = Vector2( -67, 258 )
 scale = Vector2( 2, 2 )
 cost = 2
-water_depletion_rate = 3.0
+water_depletion_rate = 1.5
 
 [node name="Crop6" parent="YSort/Plots2" groups=["crops"] instance=ExtResource( 1 )]
 position = Vector2( 73, 259 )
 scale = Vector2( 2, 2 )
 cost = 2
-water_depletion_rate = 3.0
+water_depletion_rate = 1.5
 
 [node name="Crop7" parent="YSort/Plots2" groups=["crops"] instance=ExtResource( 1 )]
 position = Vector2( 210, 260 )
 scale = Vector2( 2, 2 )
 cost = 2
 locked = true
-water_depletion_rate = 3.0
+water_depletion_rate = 1.5
 
 [node name="Crop8" parent="YSort/Plots2" groups=["crops"] instance=ExtResource( 1 )]
 position = Vector2( 75, 381 )
 scale = Vector2( 2, 2 )
 cost = 2
 locked = true
-water_depletion_rate = 3.0
+water_depletion_rate = 1.5
 
 [node name="Crop9" parent="YSort/Plots2" groups=["crops"] instance=ExtResource( 1 )]
 position = Vector2( 213, 382 )
 scale = Vector2( 2, 2 )
 cost = 2
 locked = true
-water_depletion_rate = 3.0
+water_depletion_rate = 1.5
 
 [node name="Plots3" type="YSort" parent="YSort"]
 position = Vector2( -16, -625 )
@@ -608,60 +608,60 @@ position = Vector2( -16, -625 )
 position = Vector2( -64, 119 )
 scale = Vector2( 2, 2 )
 cost = 3
-water_depletion_rate = 3.0
+water_depletion_rate = 1.5
 
 [node name="Crop2" parent="YSort/Plots3" groups=["crops"] instance=ExtResource( 1 )]
 position = Vector2( -69, 382 )
 scale = Vector2( 2, 2 )
 cost = 3
 locked = true
-water_depletion_rate = 3.0
+water_depletion_rate = 1.5
 
 [node name="Crop3" parent="YSort/Plots3" groups=["crops"] instance=ExtResource( 1 )]
 position = Vector2( 69, 125 )
 scale = Vector2( 2, 2 )
 cost = 3
-water_depletion_rate = 3.0
+water_depletion_rate = 1.5
 
 [node name="Crop4" parent="YSort/Plots3" groups=["crops"] instance=ExtResource( 1 )]
 position = Vector2( 209, 128 )
 scale = Vector2( 2, 2 )
 cost = 3
 locked = true
-water_depletion_rate = 3.0
+water_depletion_rate = 1.5
 
 [node name="Crop5" parent="YSort/Plots3" groups=["crops"] instance=ExtResource( 1 )]
 position = Vector2( -67, 258 )
 scale = Vector2( 2, 2 )
 cost = 3
-water_depletion_rate = 3.0
+water_depletion_rate = 1.5
 
 [node name="Crop6" parent="YSort/Plots3" groups=["crops"] instance=ExtResource( 1 )]
 position = Vector2( 73, 259 )
 scale = Vector2( 2, 2 )
 cost = 3
-water_depletion_rate = 3.0
+water_depletion_rate = 1.5
 
 [node name="Crop7" parent="YSort/Plots3" groups=["crops"] instance=ExtResource( 1 )]
 position = Vector2( 210, 260 )
 scale = Vector2( 2, 2 )
 cost = 3
 locked = true
-water_depletion_rate = 3.0
+water_depletion_rate = 1.5
 
 [node name="Crop8" parent="YSort/Plots3" groups=["crops"] instance=ExtResource( 1 )]
 position = Vector2( 75, 381 )
 scale = Vector2( 2, 2 )
 cost = 3
 locked = true
-water_depletion_rate = 3.0
+water_depletion_rate = 1.5
 
 [node name="Crop9" parent="YSort/Plots3" groups=["crops"] instance=ExtResource( 1 )]
 position = Vector2( 213, 382 )
 scale = Vector2( 2, 2 )
 cost = 3
 locked = true
-water_depletion_rate = 3.0
+water_depletion_rate = 1.5
 
 [node name="Trees" type="YSort" parent="YSort"]
 
