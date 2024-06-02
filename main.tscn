@@ -19,7 +19,7 @@ void fragment() {
     float alpha = 1.0 - time_of_day;
 
     // Set color to black with calculated alpha
-    vec4 color = vec4(0.0, 0.0, 0.0, alpha * 0.5); // The maximum alpha value at night is 0.8 for visible darkening
+    vec4 color = vec4(0.0, 0.0, 0.7, alpha * 0.3); // The maximum alpha value at night is 0.8 for visible darkening
 
     // Output the color; blend it over what's already rendered below
     COLOR = color;
