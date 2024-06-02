@@ -32,7 +32,7 @@ func _physics_process(delta):
 	var direction = global_position.direction_to(target.global_position)
 	velocity = direction * speed 
 	velocity = move_and_slide(velocity)
-	if target.global_position.distance_to(global_position) < 10:
+	if target.global_position.distance_to(global_position) < 30:
 		eating = true
 		$Timer.start(eating_time / eating_steps)
 

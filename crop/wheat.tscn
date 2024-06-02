@@ -1,21 +1,24 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://crop/wheat.gd" type="Script" id=1]
 [ext_resource path="res://item/item.tscn" type="PackedScene" id=2]
 [ext_resource path="res://crop/sprites/wheat_drop.png" type="Texture" id=3]
+[ext_resource path="res://interactable/font.tres" type="DynamicFont" id=4]
 
 [node name="Wheat" instance=ExtResource( 2 )]
 script = ExtResource( 1 )
 item_type = 3
 item_texture = ExtResource( 3 )
 
-[node name="Sprite" parent="." index="1"]
+[node name="Sprite" parent="." index="0"]
 scale = Vector2( 0.08, 0.08 )
 
 [node name="Label" type="Label" parent="." index="2"]
-margin_left = -41.0
-margin_top = -14.0
-margin_right = -1.0
-rect_scale = Vector2( 2, 2 )
+margin_left = -36.0
+margin_top = -13.0
+margin_right = 35.0
+margin_bottom = 16.0
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
 text = "1"
 align = 1
