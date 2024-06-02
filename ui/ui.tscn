@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://ui/day_timer.gd" type="Script" id=1]
 [ext_resource path="res://ui/sprites/sun_icon.png" type="Texture" id=2]
 [ext_resource path="res://ui/Honey Crepes.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://crop/sprites/wheat_drop.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -84,3 +85,26 @@ align = 1
 [node name="AnimateIcon" type="AnimationPlayer" parent="DayTimer"]
 anims/RESET = SubResource( 2 )
 anims/animate_in = SubResource( 3 )
+
+[node name="Label2" type="Label" parent="DayTimer"]
+margin_top = 114.0
+margin_right = 60.0
+margin_bottom = 164.0
+rect_min_size = Vector2( 0, 50 )
+
+[node name="TextureRect" type="TextureRect" parent="DayTimer"]
+margin_top = 168.0
+margin_right = 60.0
+margin_bottom = 238.0
+rect_min_size = Vector2( 0, 70 )
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 6
+
+[node name="Wheat" type="Label" parent="DayTimer"]
+margin_top = 242.0
+margin_right = 60.0
+margin_bottom = 288.0
+custom_fonts/font = SubResource( 1 )
+text = "57"
+align = 1
