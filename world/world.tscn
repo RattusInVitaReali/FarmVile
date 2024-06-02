@@ -93,6 +93,44 @@ position = Vector2( -579, -35 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 20 )
 
+[node name="Path16" type="Sprite" parent="CelaMapa/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -655, -34 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 20 )
+
+[node name="Path17" type="Sprite" parent="CelaMapa/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -811, -32 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 20 )
+
+[node name="Path19" type="Sprite" parent="CelaMapa/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -888, -29 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 20 )
+
+[node name="Path20" type="Sprite" parent="CelaMapa/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -963, -27 )
+rotation = 3.14159
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 19 )
+
+[node name="Path21" type="Sprite" parent="CelaMapa/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -965, -87 )
+rotation = 3.14159
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 18 )
+
+[node name="Path18" type="Sprite" parent="CelaMapa/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -731, -34 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 20 )
+
 [node name="Path4" type="Sprite" parent="CelaMapa/pATHS"]
 modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
 position = Vector2( -269, 171 )
@@ -130,6 +168,393 @@ scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 18 )
 
 [node name="Path10" type="Sprite" parent="CelaMapa/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -255, 498 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 18 )
+
+[node name="CelaMapa2" type="Sprite" parent="."]
+texture = ExtResource( 5 )
+
+[node name="PlotBaseColor" type="Sprite" parent="CelaMapa2"]
+position = Vector2( -636, 300 )
+scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 9 )
+
+[node name="PlotBaseColor2" type="Sprite" parent="CelaMapa2"]
+position = Vector2( 75, 284 )
+scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 9 )
+
+[node name="PlotBaseColor3" type="Sprite" parent="CelaMapa2"]
+position = Vector2( 52, -351 )
+scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 9 )
+
+[node name="pATHS" type="Node2D" parent="CelaMapa2"]
+
+[node name="Path1" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -270, 119 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 18 )
+
+[node name="Path2" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -272, 64 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 18 )
+
+[node name="Path48" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -277, -85 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 18 )
+
+[node name="Path49" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -282, -136 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 18 )
+
+[node name="Path50" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -282, -191 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 18 )
+
+[node name="Path51" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -288, -239 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 18 )
+
+[node name="Path52" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -296, -287 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 18 )
+
+[node name="Path53" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -299, -338 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 18 )
+
+[node name="Path54" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -302, -387 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 18 )
+
+[node name="Path55" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -306, -441 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 18 )
+
+[node name="Path56" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -303, -489 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 18 )
+
+[node name="Path57" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -306, -534 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 18 )
+
+[node name="Path58" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -310, -585 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 18 )
+
+[node name="Path3" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -272, 12 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 18 )
+
+[node name="Path11" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -276, -34 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 19 )
+
+[node name="Path40" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -232, -30 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 20 )
+
+[node name="Path41" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -159, -30 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 20 )
+
+[node name="Path42" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -86, -37 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 20 )
+
+[node name="Path43" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -13, -37 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 20 )
+
+[node name="Path44" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( 64, -42 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 20 )
+
+[node name="Path45" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( 143, -39 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 20 )
+
+[node name="Path46" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( 221, -40 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 20 )
+
+[node name="Path47" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( 300, -41 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 20 )
+
+[node name="Path12" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -343, -32 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 20 )
+
+[node name="Path13" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -423, -34 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 20 )
+
+[node name="Path14" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -500, -33 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 20 )
+
+[node name="Path15" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -579, -35 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 20 )
+
+[node name="Path16" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -655, -34 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 20 )
+
+[node name="Path17" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -811, -32 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 20 )
+
+[node name="Path19" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -888, -29 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 20 )
+
+[node name="Path20" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -963, -27 )
+rotation = 3.14159
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 19 )
+
+[node name="Path21" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -962, -85 )
+rotation = 3.14159
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 18 )
+
+[node name="Path22" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -961, -138 )
+rotation = 3.14159
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 18 )
+
+[node name="Path23" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -964, -192 )
+rotation = 3.14159
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 18 )
+
+[node name="Path24" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -964, -219 )
+rotation = 3.14159
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 18 )
+
+[node name="Path25" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -964, -256 )
+rotation = 3.14159
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 18 )
+
+[node name="Path26" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -1465, -522 )
+rotation = 3.14159
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 18 )
+
+[node name="Path27" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -1464, -477 )
+rotation = 3.14159
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 18 )
+
+[node name="Path28" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -1464, -440 )
+rotation = 3.14159
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 18 )
+
+[node name="Path29" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -1464, -403 )
+rotation = 3.14159
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 18 )
+
+[node name="Path30" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -1462, -357 )
+rotation = 3.14159
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 18 )
+
+[node name="Path31" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -1457, -313 )
+rotation = 3.14159
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 19 )
+
+[node name="Path32" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -1384, -315 )
+rotation = 3.14159
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 20 )
+
+[node name="Path33" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -1310, -317 )
+rotation = 3.14159
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 20 )
+
+[node name="Path34" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -1228, -322 )
+rotation = 3.14159
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 20 )
+
+[node name="Path35" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -1228, -322 )
+rotation = 3.14159
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 20 )
+
+[node name="Path36" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -1153, -322 )
+rotation = 3.14159
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 20 )
+
+[node name="Path37" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -1070, -325 )
+rotation = 3.14159
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 20 )
+
+[node name="Path39" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -1032, -324 )
+rotation = 3.14159
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 20 )
+
+[node name="Path38" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -967, -324 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 19 )
+
+[node name="Path18" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -731, -34 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 20 )
+
+[node name="Path4" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -269, 171 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 18 )
+
+[node name="Path5" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -268, 227 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 18 )
+
+[node name="Path6" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -267, 278 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 18 )
+
+[node name="Path7" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -263, 328 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 18 )
+
+[node name="Path8" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -259, 378 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 18 )
+
+[node name="Path9" type="Sprite" parent="CelaMapa2/pATHS"]
+modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
+position = Vector2( -258, 424 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 18 )
+
+[node name="Path10" type="Sprite" parent="CelaMapa2/pATHS"]
 modulate = Color( 0.886275, 0.603922, 0.372549, 1 )
 position = Vector2( -255, 498 )
 scale = Vector2( 0.1, 0.1 )
@@ -444,7 +869,7 @@ position = Vector2( 216, -89 )
 position = Vector2( -1141, -558 )
 
 [node name="Fence6" parent="YSort/Fences" instance=ExtResource( 12 )]
-position = Vector2( -780, 37 )
+position = Vector2( -786, 56 )
 
 [node name="Fence7" parent="YSort/Fences" instance=ExtResource( 13 )]
 position = Vector2( 385, 160 )
