@@ -29,14 +29,9 @@ var day_manager = null
 # Function to handle day and night cycle subscription
 func _ready():
 #	day_manager = get_node("/root/DayManager") # Adjust the path to your DayManager singleton
-#	if day_manager:
-#		day_manager.connect("night_cycle", self, "_on_night_cycle")
+	GameManager.connect("day_started", self, "_on_new_day")
+	GameManager.connect("night_ended", self, "_on_new_day")
 	update_crop_sprite()
-
-	get_tree().create_timer(0.5).connect("timeout", self, "_on_new_day")
-	get_tree().create_timer(1.2).connect("timeout", self, "_on_new_day")
-	get_tree().create_timer(2).connect("timeout", self, "_on_new_day")
-	get_tree().create_timer(3).connect("timeout", self, "_on_new_day")
 
 func _process(delta):
 	deplete_water(delta)
@@ -53,6 +48,7 @@ func destroy():
 
 # Function to advance the crop growth stage
 func advance_growth_stage():
+	print("Advancing groth stage")
 	match crop_state: 
 		CropState.CORRUPTED, CropState.WITHERED, CropState.EMPTY:
 			return
@@ -98,6 +94,10 @@ func reset_crop():
 func can_interact(player: Player) -> bool:
 	if player.item == null:
 		return false
+	if player.item.item_type == Item.ItemType.SEED:
+		if crop_state == CropState.EMPTY:
+			return true
+		return false
 	if player.item.item_type == Item.ItemType.BUCKET:
 		if crop_state == CropState.CORRUPTED or crop_state == CropState.EMPTY:
 			return false
@@ -113,21 +113,22 @@ func can_interact(player: Player) -> bool:
 func _on_Interactable_interacted_with(player: Player):
 	if player.item == null:
 		return
-	if player.item.item_type == Item.ItemType.BUCKET:
-		if player.item.water_level == 0:
-			return
-		print("Watering crop, water level: ", water_level)
-		water_level = min(100, player.item.water_level_decrement + water_level)
-		update_crop_sprite()
-		player.item.use()
-		return
-	if player.item.item_type == Item.ItemType.SICKLE:
-		if crop_state == CropState.RIPE:
-			crop_state = CropState.EMPTY
-			update_crop_sprite()
-			# player.item.use()
-			drop_wheat()
-			return
+	match player.item.item_type:
+		Item.ItemType.BUCKET:
+			if player.item.water_level == 0:
+				return
+			print("Watering crop, water level: ", water_level)
+			water_level = min(100, player.item.water_level_decrement + water_level)
+			player.item.use()
+		Item.ItemType.SICKLE:
+			if crop_state == CropState.RIPE:
+				crop_state = CropState.EMPTY
+				drop_wheat()
+		Item.ItemType.SEED:
+			if crop_state == CropState.EMPTY:
+				reset_crop()
+	update_crop_sprite()
+
 
 func drop_wheat():
 	var new_wheat = WheatScene.instance()
