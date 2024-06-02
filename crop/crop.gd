@@ -72,9 +72,14 @@ func deplete_water(delta):
 		CropState.CORRUPTED, CropState.WITHERED, CropState.EMPTY:
 			return
 	water_level = max(0, water_level - water_depletion_rate * delta)
-	if water_level <= 0:
-		crop_state = CropState.WITHERED
+	if water_level == 0:
+		wither_crop()
 	update_crop_sprite()
+
+func wither_crop():
+	crop_state = CropState.WITHERED
+	$Timer2.one_shot = true
+	$Timer2.start(4)
 
 # Function to update crop sprite based on the state
 func update_crop_sprite():
@@ -136,14 +141,17 @@ func _on_Interactable_interacted_with(player: Player):
 			player.item.use()
 		Item.ItemType.SICKLE:
 			if crop_state == CropState.RIPE:
-				crop_state = CropState.EMPTY
-				drop_wheat()
-				reset_crop()
+				harvest_crop()
 		Item.ItemType.SEED:
 			if crop_state == CropState.EMPTY:
 				crop_state = CropState.SEEDED
 	update_crop_sprite()
-
+	
+func harvest_crop():
+	crop_state = CropState.EMPTY
+	drop_wheat()
+	reset_crop()
+	
 
 func try_unlock():
 	if GameManager.wheats >= cost:
@@ -162,3 +170,8 @@ var modulates = [Color(1, 0, 0), Color(0.5, 0, 0)]
 func _on_Timer_timeout():
 	$Target.modulate = modulates[counter % 2]
 	counter +=1
+
+
+func _on_Timer2_timeout():
+	crop_state = CropState.EMPTY
+	update_crop_sprite()
