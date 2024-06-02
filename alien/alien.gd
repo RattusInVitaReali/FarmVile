@@ -47,6 +47,7 @@ func _physics_process(delta):
 		$Timer.start(eating_time / eating_steps)
 
 func take_damage():
+	$CPUParticles2D.emitting = false
 	$CPUParticles2D.emitting = true
 	hp -= 1
 	print("OW: " + str(hp))

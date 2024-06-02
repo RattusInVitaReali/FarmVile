@@ -18,7 +18,7 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 2, 1 )
-scale = Vector2( 0.04, 0.06 )
+scale = Vector2( 0.08, 0.12 )
 texture = ExtResource( 2 )
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
@@ -30,5 +30,5 @@ direction = Vector2( -1, 0 )
 spread = 15.0
 gravity = Vector2( 0, 0 )
 initial_velocity = 750.0
-scale_amount = 3.0
+scale_amount = 10.0
 color = Color( 1, 0.878431, 0.0901961, 1 )

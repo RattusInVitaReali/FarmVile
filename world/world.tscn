@@ -372,13 +372,330 @@ position = Vector2( -1040, -154 )
 [node name="Alien" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( -105, -47 )
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Bushes" type="YSort" parent="YSort"]
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="Node2D" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( -232, -668 )
 
-[node name="Zbunje" type="Sprite" parent="Node2D"]
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D"]
 position = Vector2( -2, -58 )
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 17 )
+
+[node name="Node2D2" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( -3, -769 )
+
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D2"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Node2D3" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( 155, -681 )
+
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D3"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Node2D4" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( 414, -852 )
+
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D4"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Node2D5" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( 598, -497 )
+
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D5"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Node2D6" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( 844, -254 )
+
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D6"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Node2D7" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( 724, -625 )
+
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D7"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Node2D8" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( 609, -254 )
+
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D8"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Node2D9" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( 1191, -198 )
+
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D9"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Node2D10" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( 1338, -329 )
+
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D10"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Node2D11" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( 1359, -778 )
+
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D11"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Node2D12" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( 1458, -135 )
+
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D12"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Node2D13" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( 1227, 476 )
+
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D13"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Node2D14" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( 1323, 701 )
+
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D14"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Node2D15" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( 1488, 431 )
+
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D15"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Node2D16" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( 1158, 898 )
+
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D16"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Node2D17" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( 712, 961 )
+
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D17"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Node2D18" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( 340, 925 )
+
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D18"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Node2D19" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( 472, 709 )
+
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D19"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Node2D20" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( 613, 469 )
+
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D20"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Node2D21" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( 838, 364 )
+
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D21"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Node2D22" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( 92, 930 )
+
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D22"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Node2D23" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( 254, 843 )
+
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D23"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Node2D24" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( 131, 871 )
+
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D24"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Node2D25" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( -459, 844 )
+
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D25"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Node2D26" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( -577, 896 )
+
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D26"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Node2D27" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( -700, 844 )
+
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D27"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Node2D28" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( -1196, 696 )
+
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D28"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Node2D29" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( -1560, 414 )
+
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D29"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Node2D30" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( -1600, 289 )
+
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D30"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Node2D31" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( -1659, 465 )
+
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D31"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Node2D32" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( -1606, 681 )
+
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D32"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Node2D33" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( -1756, -103 )
+
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D33"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Node2D34" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( -1726, -313 )
+
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D34"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Node2D35" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( -1679, -449 )
+
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D35"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Node2D36" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( -1681, -521 )
+
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D36"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Node2D37" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( -931, -737 )
+
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D37"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Node2D38" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( -814, -805 )
+
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D38"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Node2D39" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( -511, -744 )
+
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D39"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Node2D40" type="Node2D" parent="YSort/Bushes"]
+position = Vector2( -447, -750 )
+
+[node name="Zbunje" type="Sprite" parent="YSort/Bushes/Node2D40"]
+position = Vector2( -2, -58 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 17 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Node2D" type="Node2D" parent="."]
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
