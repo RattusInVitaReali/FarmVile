@@ -9,7 +9,7 @@ signal night_started
 signal day_started
 
 # Member variables
-var wheats = 100
+var wheats = 5
 var is_day = true
 var day_timer: Timer
 var night_timer: Timer

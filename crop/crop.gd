@@ -164,6 +164,7 @@ func try_unlock():
 func drop_wheat():
 	var new_wheat = WheatScene.instance()
 	new_wheat.position = position
+	new_wheat.count = int(rand_range(3, 5))
 	get_parent().add_child_below_node(self, new_wheat)
 
 var counter = 0

@@ -454,7 +454,7 @@ shape = SubResource( 1 )
 position = Vector2( -1466, -680 )
 
 [node name="Gun" parent="YSort" instance=ExtResource( 8 )]
-position = Vector2( -785, -350 )
+position = Vector2( 347, -72 )
 
 [node name="Gun2" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( -737, -545 )
