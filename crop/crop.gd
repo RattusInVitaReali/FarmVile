@@ -173,5 +173,4 @@ func _on_Timer_timeout():
 
 
 func _on_Timer2_timeout():
-	crop_state = CropState.EMPTY
-	update_crop_sprite()
+	reset_crop()
