@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://crop/crop.gd" type="Script" id=1]
 [ext_resource path="res://crop/sprites/psenica f5 .png" type="Texture" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://crop/sprites/crop_ripe.png" type="Texture" id=7]
 [ext_resource path="res://interactable/interactable.tscn" type="PackedScene" id=8]
 [ext_resource path="res://crop/sprites/crop_seeded.png" type="Texture" id=9]
+[ext_resource path="res://crop/padlock.png" type="Texture" id=10]
+[ext_resource path="res://interactable/font.tres" type="DynamicFont" id=11]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.32549, 0.682353, 1, 1 )
@@ -56,12 +58,30 @@ shape = SubResource( 3 )
 
 [node name="Target" type="Sprite" parent="."]
 visible = false
+modulate = Color( 1, 0.513726, 0, 1 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 3 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.3
 autostart = true
+
+[node name="Padlock" type="Sprite" parent="."]
+visible = false
+position = Vector2( 0, 6 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 10 )
+
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_left = -21.0
+margin_top = 11.0
+margin_right = 19.0
+margin_bottom = 40.0
+custom_fonts/font = ExtResource( 11 )
+text = "1"
+align = 1
+valign = 1
 
 [connection signal="interacted_with" from="Interactable" to="." method="_on_Interactable_interacted_with"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

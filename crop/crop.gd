@@ -2,10 +2,12 @@ extends Node2D
 class_name Crop
 
 const WheatScene = preload("res://crop/wheat.tscn")
+export var cost = 1
 
 # Enum for crop states
 enum CropState { EMPTY, SEEDED, STAGE_1, STAGE_2, RIPE, WITHERED, CORRUPTED }
 
+export(bool) var locked = false
 # Exported variables
 export(float) var water_level: float = 100.0
 export(float) var water_depletion_rate: float = 1.0
@@ -32,7 +34,12 @@ func _ready():
 #	if day_manager:
 #		day_manager.connect("night_cycle", self, "_on_night_cycle")
 	update_crop_sprite()
-
+	if locked:
+		$Padlock.visible = true
+		$Label.visible = true
+		crop_state = CropState.EMPTY
+	else:
+		crop_state = CropState.SEEDED
 	get_tree().create_timer(0.5).connect("timeout", self, "_on_new_day")
 	get_tree().create_timer(1.2).connect("timeout", self, "_on_new_day")
 	get_tree().create_timer(2).connect("timeout", self, "_on_new_day")
@@ -96,6 +103,8 @@ func reset_crop():
 	update_crop_sprite()
 
 func can_interact(player: Player) -> bool:
+	if locked:
+		return true
 	if player.item == null:
 		return false
 	if player.item.item_type == Item.ItemType.BUCKET:
@@ -111,6 +120,8 @@ func can_interact(player: Player) -> bool:
 
 
 func _on_Interactable_interacted_with(player: Player):
+	if locked:
+		try_unlock()
 	if player.item == null:
 		return
 	if player.item.item_type == Item.ItemType.BUCKET:
@@ -129,13 +140,20 @@ func _on_Interactable_interacted_with(player: Player):
 			drop_wheat()
 			return
 
+func try_unlock():
+	if GameManager.wheats >= cost:
+		GameManager.wheats -= cost
+		locked = false
+		$Padlock.visible = false
+		$Label.visible = false
+
 func drop_wheat():
 	var new_wheat = WheatScene.instance()
 	new_wheat.position = position
 	get_parent().add_child_below_node(self, new_wheat)
 
 var counter = 0
-var modulates = [Color(1, 1, 1), Color(0.5, 0.5, 0.5)]
+var modulates = [Color(1, 0, 0), Color(0.5, 0, 0)]
 func _on_Timer_timeout():
 	$Target.modulate = modulates[counter % 2]
 	counter +=1

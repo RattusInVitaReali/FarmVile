@@ -97,5 +97,5 @@ func equip(new_item: Item):
 	item = new_item
 	item.get_parent().remove_child(item)
 	add_child(item)
-	item.position = Vector2(0,-60)
+	item.position = Vector2(0,-120)
 	item.disable()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://crop/crop.tscn" type="PackedScene" id=1]
 [ext_resource path="res://item/bucket.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://buildings/fences/fence.tscn" type="PackedScene" id=11]
 [ext_resource path="res://buildings/fences/fence2.tscn" type="PackedScene" id=12]
 [ext_resource path="res://buildings/fences/fence3.tscn" type="PackedScene" id=13]
+[ext_resource path="res://item/tree2 (2).png" type="Texture" id=14]
 
 [node name="Main" type="Node2D"]
 
@@ -46,51 +47,6 @@ position = Vector2( -960, -160 )
 [node name="Barn" parent="YSort/Gun" instance=ExtResource( 10 )]
 position = Vector2( -506, -520 )
 
-[node name="Crop1" parent="YSort" groups=["crops"] instance=ExtResource( 1 )]
-position = Vector2( -64, 119 )
-scale = Vector2( 2, 2 )
-water_depletion_rate = 3.0
-
-[node name="Crop2" parent="YSort" groups=["crops"] instance=ExtResource( 1 )]
-position = Vector2( -69, 382 )
-scale = Vector2( 2, 2 )
-water_depletion_rate = 3.0
-
-[node name="Crop3" parent="YSort" groups=["crops"] instance=ExtResource( 1 )]
-position = Vector2( 69, 125 )
-scale = Vector2( 2, 2 )
-water_depletion_rate = 3.0
-
-[node name="Crop4" parent="YSort" groups=["crops"] instance=ExtResource( 1 )]
-position = Vector2( 209, 128 )
-scale = Vector2( 2, 2 )
-water_depletion_rate = 3.0
-
-[node name="Crop5" parent="YSort" groups=["crops"] instance=ExtResource( 1 )]
-position = Vector2( -67, 258 )
-scale = Vector2( 2, 2 )
-water_depletion_rate = 3.0
-
-[node name="Crop6" parent="YSort" groups=["crops"] instance=ExtResource( 1 )]
-position = Vector2( 73, 259 )
-scale = Vector2( 2, 2 )
-water_depletion_rate = 3.0
-
-[node name="Crop7" parent="YSort" groups=["crops"] instance=ExtResource( 1 )]
-position = Vector2( 210, 260 )
-scale = Vector2( 2, 2 )
-water_depletion_rate = 3.0
-
-[node name="Crop8" parent="YSort" groups=["crops"] instance=ExtResource( 1 )]
-position = Vector2( 75, 381 )
-scale = Vector2( 2, 2 )
-water_depletion_rate = 3.0
-
-[node name="Crop9" parent="YSort" groups=["crops"] instance=ExtResource( 1 )]
-position = Vector2( 213, 382 )
-scale = Vector2( 2, 2 )
-water_depletion_rate = 3.0
-
 [node name="Sickle" parent="YSort" instance=ExtResource( 6 )]
 position = Vector2( -323, -132 )
 item_texture = null
@@ -107,40 +63,180 @@ position = Vector2( -574, -126 )
 player_id = 1
 
 [node name="Player" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( -754, -409 )
+position = Vector2( -438, -177 )
 
-[node name="Fence" parent="YSort" instance=ExtResource( 11 )]
+[node name="Plots1" type="YSort" parent="YSort"]
+
+[node name="Crop1" parent="YSort/Plots1" groups=["crops"] instance=ExtResource( 1 )]
+position = Vector2( -64, 119 )
+scale = Vector2( 2, 2 )
+water_depletion_rate = 3.0
+
+[node name="Crop2" parent="YSort/Plots1" groups=["crops"] instance=ExtResource( 1 )]
+position = Vector2( -69, 382 )
+scale = Vector2( 2, 2 )
+locked = true
+water_depletion_rate = 3.0
+
+[node name="Crop3" parent="YSort/Plots1" groups=["crops"] instance=ExtResource( 1 )]
+position = Vector2( 69, 125 )
+scale = Vector2( 2, 2 )
+water_depletion_rate = 3.0
+
+[node name="Crop4" parent="YSort/Plots1" groups=["crops"] instance=ExtResource( 1 )]
+position = Vector2( 209, 128 )
+scale = Vector2( 2, 2 )
+locked = true
+water_depletion_rate = 3.0
+
+[node name="Crop5" parent="YSort/Plots1" groups=["crops"] instance=ExtResource( 1 )]
+position = Vector2( -67, 258 )
+scale = Vector2( 2, 2 )
+water_depletion_rate = 3.0
+
+[node name="Crop6" parent="YSort/Plots1" groups=["crops"] instance=ExtResource( 1 )]
+position = Vector2( 73, 259 )
+scale = Vector2( 2, 2 )
+water_depletion_rate = 3.0
+
+[node name="Crop7" parent="YSort/Plots1" groups=["crops"] instance=ExtResource( 1 )]
+position = Vector2( 210, 260 )
+scale = Vector2( 2, 2 )
+locked = true
+water_depletion_rate = 3.0
+
+[node name="Crop8" parent="YSort/Plots1" groups=["crops"] instance=ExtResource( 1 )]
+position = Vector2( 75, 381 )
+scale = Vector2( 2, 2 )
+locked = true
+water_depletion_rate = 3.0
+
+[node name="Crop9" parent="YSort/Plots1" groups=["crops"] instance=ExtResource( 1 )]
+position = Vector2( 213, 382 )
+scale = Vector2( 2, 2 )
+locked = true
+water_depletion_rate = 3.0
+
+[node name="Trees" type="YSort" parent="YSort"]
+
+[node name="Node2D" type="Node2D" parent="YSort/Trees"]
+position = Vector2( -1592, 138 )
+
+[node name="Tree2(2)" type="Sprite" parent="YSort/Trees/Node2D"]
+position = Vector2( 22, -225 )
+texture = ExtResource( 14 )
+
+[node name="Node2D2" type="Node2D" parent="YSort/Trees"]
+position = Vector2( -1381, 674 )
+
+[node name="Tree2(2)" type="Sprite" parent="YSort/Trees/Node2D2"]
+position = Vector2( 22, -225 )
+texture = ExtResource( 14 )
+
+[node name="Node2D3" type="Node2D" parent="YSort/Trees"]
+position = Vector2( -932, 867 )
+
+[node name="Tree2(2)" type="Sprite" parent="YSort/Trees/Node2D3"]
+position = Vector2( 22, -225 )
+texture = ExtResource( 14 )
+
+[node name="Node2D4" type="Node2D" parent="YSort/Trees"]
+position = Vector2( -245, 871 )
+
+[node name="Tree2(2)" type="Sprite" parent="YSort/Trees/Node2D4"]
+position = Vector2( 22, -225 )
+texture = ExtResource( 14 )
+
+[node name="Node2D5" type="Node2D" parent="YSort/Trees"]
+position = Vector2( -1623, -734 )
+
+[node name="Tree2(2)" type="Sprite" parent="YSort/Trees/Node2D5"]
+position = Vector2( 22, -225 )
+texture = ExtResource( 14 )
+
+[node name="Node2D6" type="Node2D" parent="YSort/Trees"]
+position = Vector2( -1238, -874 )
+
+[node name="Tree2(2)" type="Sprite" parent="YSort/Trees/Node2D6"]
+position = Vector2( 22, -225 )
+texture = ExtResource( 14 )
+
+[node name="Node2D7" type="Node2D" parent="YSort/Trees"]
+position = Vector2( 835, -806 )
+
+[node name="Tree2(2)" type="Sprite" parent="YSort/Trees/Node2D7"]
+position = Vector2( 22, -225 )
+texture = ExtResource( 14 )
+
+[node name="Node2D8" type="Node2D" parent="YSort/Trees"]
+position = Vector2( 1043, -474 )
+
+[node name="Tree2(2)" type="Sprite" parent="YSort/Trees/Node2D8"]
+position = Vector2( 22, -225 )
+texture = ExtResource( 14 )
+
+[node name="Node2D9" type="Node2D" parent="YSort/Trees"]
+position = Vector2( 1232, 285 )
+
+[node name="Tree2(2)" type="Sprite" parent="YSort/Trees/Node2D9"]
+position = Vector2( 22, -225 )
+texture = ExtResource( 14 )
+
+[node name="Node2D10" type="Node2D" parent="YSort/Trees"]
+position = Vector2( 881, 791 )
+
+[node name="Tree2(2)" type="Sprite" parent="YSort/Trees/Node2D10"]
+position = Vector2( 22, -225 )
+texture = ExtResource( 14 )
+
+[node name="Node2D11" type="Node2D" parent="YSort/Trees"]
+position = Vector2( 1621, -293 )
+
+[node name="Tree2(2)" type="Sprite" parent="YSort/Trees/Node2D11"]
+position = Vector2( 22, -225 )
+texture = ExtResource( 14 )
+
+[node name="Node2D12" type="Node2D" parent="YSort/Trees"]
+position = Vector2( -319, -889 )
+
+[node name="Tree2(2)" type="Sprite" parent="YSort/Trees/Node2D12"]
+position = Vector2( 22, -225 )
+texture = ExtResource( 14 )
+
+[node name="Fences" type="YSort" parent="YSort"]
+
+[node name="Fence" parent="YSort/Fences" instance=ExtResource( 11 )]
 position = Vector2( -42, -621 )
 
-[node name="Fence2" parent="YSort" instance=ExtResource( 11 )]
+[node name="Fence2" parent="YSort/Fences" instance=ExtResource( 11 )]
 position = Vector2( -634, 563 )
 
-[node name="Fence3" parent="YSort" instance=ExtResource( 11 )]
+[node name="Fence3" parent="YSort/Fences" instance=ExtResource( 11 )]
 position = Vector2( -56, 528 )
 
-[node name="Fence4" parent="YSort" instance=ExtResource( 12 )]
+[node name="Fence4" parent="YSort/Fences" instance=ExtResource( 12 )]
 position = Vector2( 216, -89 )
 
-[node name="Fence5" parent="YSort" instance=ExtResource( 12 )]
+[node name="Fence5" parent="YSort/Fences" instance=ExtResource( 12 )]
 position = Vector2( -1141, -558 )
 
-[node name="Fence6" parent="YSort" instance=ExtResource( 12 )]
+[node name="Fence6" parent="YSort/Fences" instance=ExtResource( 12 )]
 position = Vector2( -780, 37 )
 
-[node name="Fence7" parent="YSort" instance=ExtResource( 13 )]
+[node name="Fence7" parent="YSort/Fences" instance=ExtResource( 13 )]
 position = Vector2( 385, 160 )
 
-[node name="Fence8" parent="YSort" instance=ExtResource( 13 )]
+[node name="Fence8" parent="YSort/Fences" instance=ExtResource( 13 )]
 position = Vector2( -229, -480 )
 
-[node name="Fence9" parent="YSort" instance=ExtResource( 13 )]
+[node name="Fence9" parent="YSort/Fences" instance=ExtResource( 13 )]
 position = Vector2( -1067, -831 )
 
-[node name="Fence10" parent="YSort" instance=ExtResource( 12 )]
+[node name="Fence10" parent="YSort/Fences" instance=ExtResource( 12 )]
 position = Vector2( -692, -774 )
 
-[node name="Fence11" parent="YSort" instance=ExtResource( 11 )]
+[node name="Fence11" parent="YSort/Fences" instance=ExtResource( 11 )]
 position = Vector2( -1277, -247 )
 
-[node name="Fence12" parent="YSort" instance=ExtResource( 13 )]
+[node name="Fence12" parent="YSort/Fences" instance=ExtResource( 13 )]
 position = Vector2( -1040, -154 )

@@ -17,14 +17,14 @@ max_water_level = 100
 water_level_decrement = 5
 
 [node name="LargeShadow" parent="." index="0"]
-position = Vector2( 1, 18 )
+position = Vector2( 1, 26 )
 scale = Vector2( 1.20313, 0.85 )
 
 [node name="Sprite" parent="." index="1"]
 scale = Vector2( 0.08, 0.08 )
 texture = ExtResource( 3 )
 
-[node name="WaterIndicator" type="ProgressBar" parent="." index="3"]
+[node name="WaterIndicator" type="ProgressBar" parent="." index="2"]
 margin_left = -25.0
 margin_top = -45.0
 margin_right = 75.0

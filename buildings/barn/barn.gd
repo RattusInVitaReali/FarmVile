@@ -2,7 +2,8 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Interactable/InteractionRadius/CollisionShape2D.shape.radius = 150
+#	$Interactable/InteractionRadius/CollisionShape2D.shape.radius = 150
+	pass
 
 func can_interact(player: Player):
 	if player.item == null:
