@@ -29,10 +29,20 @@ func get_input():
 		shoot()
 	# Make sure diagonal movement isn't faster
 	velocity = velocity.normalized() * speed
-	if $PlayerAnimation/AnimationPlayer.current_animation == "Idle" and velocity != Vector2.ZERO:
-		$PlayerAnimation/AnimationPlayer.play("Walk")
-	if $PlayerAnimation/AnimationPlayer.current_animation == "Walk" and velocity == Vector2.ZERO:
-		$PlayerAnimation/AnimationPlayer.play("Idle")
+	var anim_name = "Idle"
+	
+	if velocity == Vector2.ZERO:
+		if item != null:
+			anim_name = "Idle with item"
+		else:
+			anim_name = "Idle"
+	else:
+		if item != null:
+			anim_name = "Walk with item"
+		else:
+			anim_name = "Walk"
+	if $PlayerAnimation/AnimationPlayer.current_animation != anim_name:
+		$PlayerAnimation/AnimationPlayer.play(anim_name)
 	if velocity.x > 0:
 		$PlayerAnimation.scale = Vector2(-0.1, 0.1)
 	elif velocity.x < 0:

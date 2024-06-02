@@ -6,6 +6,7 @@
 
 [node name="Sickle" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
+item_texture = ExtResource( 3 )
 
 [node name="LargeShadow" parent="." index="0"]
 position = Vector2( -1, 35 )

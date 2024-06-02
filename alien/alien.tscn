@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://alien/alien.gd" type="Script" id=1]
 [ext_resource path="res://alien/alien_animations.tscn" type="PackedScene" id=2]
+[ext_resource path="res://alien/—Pngtree—swipe left_4615249 (1).png" type="Texture" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 7.0
@@ -39,16 +40,27 @@ color = Color( 1, 0.0352941, 0.0352941, 1 )
 [node name="Timer" type="Timer" parent="."]
 
 [node name="EatingIndicator" type="ProgressBar" parent="."]
-margin_left = -29.0
-margin_top = -56.0
-margin_right = 31.0
-margin_bottom = -42.0
+margin_left = -32.0
+margin_top = -114.0
+margin_right = 28.0
+margin_bottom = -100.0
 rect_scale = Vector2( 1, 0.6 )
 custom_colors/font_color = Color( 0, 0, 0, 0 )
 custom_styles/fg = SubResource( 2 )
 custom_styles/bg = SubResource( 3 )
 
 [node name="AlienAnimations" parent="." instance=ExtResource( 2 )]
-scale = Vector2( 0.05, 0.05 )
+position = Vector2( 1, -11 )
+scale = Vector2( 0.1, 0.1 )
+
+[node name="Indicator" type="Sprite" parent="."]
+position = Vector2( 3, -145 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 3 )
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]

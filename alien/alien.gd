@@ -38,9 +38,9 @@ func _physics_process(delta):
 	var direction = global_position.direction_to(target.global_position)
 	velocity = direction * speed 
 	if velocity.x < 0:
-		$AlienAnimations.scale = Vector2(-0.035, 0.035)
+		$AlienAnimations.scale = Vector2(-0.1, 0.1)
 	if velocity.x > 0:
-		$AlienAnimations.scale = Vector2(0.035, 0.035)
+		$AlienAnimations.scale = Vector2(0.1, 0.1)
 	velocity = move_and_slide(velocity)
 	if target.global_position.distance_to(global_position) < 30:
 		eating = true
@@ -54,6 +54,7 @@ func take_damage():
 		die()
 
 func die():
+	target.get_node("Target").visible = false
 	is_dead = true
 	queue_free()
 
@@ -65,3 +66,9 @@ func _on_Timer_timeout():
 		target.destroy()
 		$Timer.stop()
 		die()
+
+var counter = 1
+var colors = [Color(1, 0, 0), Color(1, 0.3, 0.3)]
+func _on_Timer2_timeout():
+	$Indicator.self_modulate = colors[counter % 2]
+	counter += 1

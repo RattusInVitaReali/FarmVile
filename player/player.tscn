@@ -38,15 +38,6 @@ scale = Vector2( 0.1, 0.1 )
 [node name="Body" parent="PlayerAnimation/Skeleton2D" index="0"]
 position = Vector2( 365.669, 504.089 )
 
-[node name="Head" parent="PlayerAnimation/Skeleton2D/Body" index="0"]
-position = Vector2( -12, 354 )
-
-[node name="FrontArm" parent="PlayerAnimation/Skeleton2D/Body" index="3"]
-position = Vector2( -127, 211 )
-
-[node name="BackArm" parent="PlayerAnimation/Skeleton2D/Body" index="4"]
-position = Vector2( 67, 201 )
-
 [connection signal="area_entered" from="InteractableScaner" to="." method="_on_InteractableScaner_area_entered"]
 [connection signal="area_exited" from="InteractableScaner" to="." method="_on_InteractableScaner_area_exited"]
 

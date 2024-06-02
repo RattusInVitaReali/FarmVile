@@ -45,21 +45,19 @@ texture = ExtResource( 9 )
 position = Vector2( -1466, -680 )
 
 [node name="Gun" parent="YSort" instance=ExtResource( 8 )]
-position = Vector2( -960, -160 )
+position = Vector2( 226, -35 )
 
 [node name="SeedBucket" parent="YSort" instance=ExtResource( 16 )]
 position = Vector2( -738, -194 )
 
 [node name="Sickle" parent="YSort" instance=ExtResource( 6 )]
 position = Vector2( -323, -132 )
-item_texture = null
 
 [node name="Tap" parent="YSort" instance=ExtResource( 3 )]
 position = Vector2( -281, -47 )
 
 [node name="Bucket" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( -362, -40 )
-item_texture = null
 max_water_level = 150
 water_level_decrement = 10
 
@@ -68,7 +66,7 @@ position = Vector2( -574, -126 )
 player_id = 1
 
 [node name="Player" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( -438, -177 )
+position = Vector2( 90, -17 )
 
 [node name="Plots1" type="YSort" parent="YSort"]
 
@@ -247,10 +245,8 @@ position = Vector2( -1277, -247 )
 position = Vector2( -1040, -154 )
 
 [node name="Alien" parent="YSort" instance=ExtResource( 7 )]
-position = Vector2( -106, -52 )
+position = Vector2( -105, -47 )
 
 [node name="Timer" type="Timer" parent="."]
-
-[node name="NightTimer" type="Timer" parent="."]
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

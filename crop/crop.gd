@@ -42,6 +42,8 @@ func _ready():
 func _process(delta):
 	deplete_water(delta)
 	water_indicator.value = water_level
+	if crop_state == CropState.CORRUPTED:
+		$Target.visible = false
 
 # Function called on each night cycle
 func _on_new_day():
