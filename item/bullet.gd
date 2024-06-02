@@ -8,7 +8,8 @@ func set_target(t: Alien):
 	target = t
 
 func _physics_process(delta):
-	if target == null:
+	if target == null or !is_instance_valid(target):
+		queue_free()
 		return
 	look_at(target.global_position)
 	var direction = global_position.direction_to(target.global_position)

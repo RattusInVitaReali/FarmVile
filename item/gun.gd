@@ -12,6 +12,6 @@ func shoot(player: Player):
 			closest = body
 	$Sprite.look_at(closest.global_position)
 	var bullet = Bullet.instance()
-	player.get_parent().add_child(bullet)
 	bullet.set_target(closest)
+	player.get_parent().add_child(bullet)
 	bullet.position = player.position

@@ -1,8 +1,8 @@
 extends Node2D
 
 # Exported variables for day and night timers
-var day_duration: float = 5 # Duration of the day in seconds
-var night_duration: float = 5# Duration of the night in seconds
+var day_duration: float = 30 # Duration of the day in seconds
+var night_duration: float = 30# Duration of the night in seconds
 
 # Signals
 signal night_started

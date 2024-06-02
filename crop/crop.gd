@@ -38,12 +38,6 @@ func _ready():
 		$Padlock.visible = true
 		$Label.visible = true
 		crop_state = CropState.EMPTY
-	else:
-		crop_state = CropState.SEEDED
-	get_tree().create_timer(0.5).connect("timeout", self, "_on_new_day")
-	get_tree().create_timer(1.2).connect("timeout", self, "_on_new_day")
-	get_tree().create_timer(2).connect("timeout", self, "_on_new_day")
-	get_tree().create_timer(3).connect("timeout", self, "_on_new_day")
 
 func _process(delta):
 	deplete_water(delta)
@@ -127,6 +121,7 @@ func can_interact(player: Player) -> bool:
 func _on_Interactable_interacted_with(player: Player):
 	if locked:
 		try_unlock()
+		return
 	if player.item == null:
 		return
 	match player.item.item_type:
@@ -140,9 +135,10 @@ func _on_Interactable_interacted_with(player: Player):
 			if crop_state == CropState.RIPE:
 				crop_state = CropState.EMPTY
 				drop_wheat()
+				reset_crop()
 		Item.ItemType.SEED:
 			if crop_state == CropState.EMPTY:
-				reset_crop()
+				crop_state = CropState.SEEDED
 	update_crop_sprite()
 
 

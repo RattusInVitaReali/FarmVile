@@ -7,7 +7,7 @@ export var eating_steps = 3
 onready var eating_indicator = $EatingIndicator
 
 const speed = 50
-var max_hp = 30
+var max_hp = 5
 var velocity = Vector2.ZERO
 var eating: bool = false
 var eating_counter = 0
@@ -18,7 +18,9 @@ var target : Crop
 
 func _ready():
 	var crops = get_tree().get_nodes_in_group("crops")
-	set_target(crops[0])
+	print(crops)
+	set_target(crops[randi() % crops.size()])
+	$AlienAnimations/AnimationPlayer.play("Walk")
 	
 
 func set_target(new_target):
@@ -33,6 +35,10 @@ func _physics_process(delta):
 	target.get_node("Target").visible = true
 	var direction = global_position.direction_to(target.global_position)
 	velocity = direction * speed 
+	if velocity.x < 0:
+		$AlienAnimations.scale = Vector2(-0.035, 0.035)
+	if velocity.x > 0:
+		$AlienAnimations.scale = Vector2(0.035, 0.035)
 	velocity = move_and_slide(velocity)
 	if target.global_position.distance_to(global_position) < 30:
 		eating = true
