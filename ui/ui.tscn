@@ -63,10 +63,10 @@ anchor_bottom = 1.0
 [node name="TextureRect3" type="TextureRect" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -48.0
-margin_top = -90.0
-margin_right = 139.0
-margin_bottom = 1372.0
+margin_left = -70.0
+margin_top = -157.0
+margin_right = 187.0
+margin_bottom = 2485.0
 rect_scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 6 )
 stretch_mode = 1
