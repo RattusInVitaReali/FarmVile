@@ -9,7 +9,7 @@ script = ExtResource( 2 )
 item_type = 4
 item_texture = ExtResource( 3 )
 
-[node name="Sprite" parent="." index="1"]
+[node name="Sprite" parent="." index="0"]
 position = Vector2( -1, -9 )
 scale = Vector2( 0.08, 0.08 )
 texture = ExtResource( 3 )
