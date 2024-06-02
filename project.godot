@@ -15,7 +15,7 @@ _global_script_classes=[ {
 "path": "res://alien/alien.gd"
 }, {
 "base": "Item",
-"class": "BUCKET",
+"class": "Bucket",
 "language": "GDScript",
 "path": "res://item/bucket.gd"
 }, {
@@ -51,7 +51,7 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "Alien": "",
-"BUCKET": "",
+"Bucket": "",
 "Crop": "",
 "Interactable": "",
 "Item": "",

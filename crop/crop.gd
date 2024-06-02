@@ -53,8 +53,8 @@ func destroy():
 # Function to advance the crop growth stage
 func advance_growth_stage():
 	match crop_state: 
-		CropState.CORRUPTED, CropState.WITHERED:
-			pass
+		CropState.CORRUPTED, CropState.WITHERED, CropState.EMPTY:
+			return
 		
 	if crop_state < CropState.RIPE:
 		crop_state += 1
@@ -62,7 +62,10 @@ func advance_growth_stage():
 
 # Function to deplete water level
 func deplete_water(delta):
-	water_level -= water_depletion_rate * delta
+	match crop_state:
+		CropState.CORRUPTED, CropState.WITHERED, CropState.EMPTY:
+			return
+	water_level = max(0, water_level - water_depletion_rate * delta)
 	if water_level <= 0:
 		crop_state = CropState.WITHERED
 	update_crop_sprite()
