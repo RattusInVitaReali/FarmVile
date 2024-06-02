@@ -566,19 +566,29 @@ texture = ExtResource( 18 )
 position = Vector2( -1466, -680 )
 
 [node name="Gun" parent="YSort" instance=ExtResource( 8 )]
-position = Vector2( 226, -35 )
+position = Vector2( -776, -347 )
+
+[node name="Gun2" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( -567, -536 )
+locked = true
 
 [node name="SeedBucket" parent="YSort" instance=ExtResource( 16 )]
-position = Vector2( -738, -194 )
+position = Vector2( -572, -349 )
 
 [node name="Sickle" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( -366, -153 )
+position = Vector2( -681, -357 )
 
 [node name="Tap" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( -237, -140 )
+position = Vector2( -348, -134 )
 
 [node name="Bucket" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( -414, -122 )
+position = Vector2( -480, -348 )
+max_water_level = 150
+water_level_decrement = 10
+
+[node name="Bucket2" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( -478, -532 )
+locked = true
 max_water_level = 150
 water_level_decrement = 10
 
