@@ -41,6 +41,7 @@ func _ready():
 
 func _process(delta):
 	deplete_water(delta)
+	$Label.text = str(cost)
 	water_indicator.value = water_level
 	if crop_state == CropState.CORRUPTED:
 		$Target.visible = false

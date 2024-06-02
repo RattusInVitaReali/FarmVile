@@ -24,6 +24,8 @@ func _ready():
 #func _process(delta):
 #	pass
 
+func _process(delta):
+	$Label.text = str(cost)
 
 func _on_Interactable_interacted_with(player):
 	if locked:
