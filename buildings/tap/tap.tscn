@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://interactable/interactable.tscn" type="PackedScene" id=1]
 [ext_resource path="res://buildings/tap/tap.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://buildings/tap/tap_anim/Layer 1.png" type="Texture" id=4]
 [ext_resource path="res://buildings/tap/tap_sprite.png" type="Texture" id=5]
 [ext_resource path="res://buildings/tap/tap_anim/Layer 1 copy 2.png" type="Texture" id=6]
+[ext_resource path="res://item/LargeShadow.png" type="Texture" id=7]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -21,6 +22,11 @@ radius = 20.0
 [node name="Tap" type="Node2D"]
 script = ExtResource( 2 )
 
+[node name="LargeShadow" type="Sprite" parent="."]
+position = Vector2( 8, 43 )
+scale = Vector2( 1.59375, 1.5 )
+texture = ExtResource( 7 )
+
 [node name="Sprite" type="Sprite" parent="."]
 rotation = 0.00140871
 scale = Vector2( 0.15, 0.15 )
@@ -32,7 +38,6 @@ position = Vector2( -149.718, 200.211 )
 rotation = 0.0157042
 scale = Vector2( 2.5, 2.5 )
 frames = SubResource( 1 )
-frame = 1
 playing = true
 
 [node name="Interactable" parent="." instance=ExtResource( 1 )]

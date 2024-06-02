@@ -47,6 +47,7 @@ func _on_new_day():
 	advance_growth_stage()
 
 func destroy():
+	$Target.visible = false
 	crop_state = CropState.CORRUPTED
 	update_crop_sprite()
 
@@ -129,3 +130,9 @@ func drop_wheat():
 	var new_wheat = WheatScene.instance()
 	new_wheat.position = position
 	get_parent().add_child_below_node(self, new_wheat)
+
+var counter = 0
+var modulates = [Color(1, 1, 1), Color(0.5, 0.5, 0.5)]
+func _on_Timer_timeout():
+	$Target.modulate = modulates[counter % 2]
+	counter +=1

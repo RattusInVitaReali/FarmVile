@@ -25,7 +25,9 @@ func _on_Interactable_interacted_with(player):
 	player.equip(self)
 
 func enable():
+	$LargeShadow.visible = true
 	$Interactable.enable()
 	
 func disable():
+	$LargeShadow.visible = false
 	$Interactable.disable()

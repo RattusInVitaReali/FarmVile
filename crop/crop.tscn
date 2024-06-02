@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://crop/crop.gd" type="Script" id=1]
 [ext_resource path="res://crop/sprites/psenica f5 .png" type="Texture" id=2]
+[ext_resource path="res://crop/symbole-cible-rouge.png" type="Texture" id=3]
 [ext_resource path="res://crop/sprites/crop_empty.png" type="Texture" id=4]
 [ext_resource path="res://crop/sprites/crop_1.png" type="Texture" id=5]
 [ext_resource path="res://crop/sprites/crop_2.png" type="Texture" id=6]
@@ -53,4 +54,14 @@ position = Vector2( 0, 14 )
 position = Vector2( 0, 15 )
 shape = SubResource( 3 )
 
+[node name="Target" type="Sprite" parent="."]
+visible = false
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 3 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
+
 [connection signal="interacted_with" from="Interactable" to="." method="_on_Interactable_interacted_with"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

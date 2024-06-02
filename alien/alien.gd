@@ -23,12 +23,14 @@ func _ready():
 
 func set_target(new_target):
 	target = new_target
+	
 
 func _physics_process(delta):
 	if target == null:
 		return
 	if eating:
 		return
+	target.get_node("Target").visible = true
 	var direction = global_position.direction_to(target.global_position)
 	velocity = direction * speed 
 	velocity = move_and_slide(velocity)

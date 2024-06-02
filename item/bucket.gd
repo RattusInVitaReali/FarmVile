@@ -21,6 +21,9 @@ func _ready():
 	water_level = max_water_level
 	update_sprite()
 
+func _process(delta):
+	$WaterIndicator.value = float(water_level)
+
 func update_sprite():
 	if water_level <= 0:
 		sprite.texture = empty_texture

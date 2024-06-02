@@ -10,7 +10,7 @@ script = ExtResource( 1 )
 item_type = 3
 item_texture = ExtResource( 3 )
 
-[node name="Sprite" parent="." index="0"]
+[node name="Sprite" parent="." index="1"]
 scale = Vector2( 0.08, 0.08 )
 
 [node name="Label" type="Label" parent="." index="2"]

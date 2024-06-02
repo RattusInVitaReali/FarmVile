@@ -1,11 +1,18 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://item/item.gd" type="Script" id=1]
 [ext_resource path="res://interactable/interactable.tscn" type="PackedScene" id=2]
 [ext_resource path="res://item/sprites/hoe_png.png" type="Texture" id=3]
+[ext_resource path="res://item/LargeShadow.png" type="Texture" id=4]
 
 [node name="Item" type="Node2D"]
 script = ExtResource( 1 )
+item_texture = ExtResource( 4 )
+
+[node name="LargeShadow" type="Sprite" parent="."]
+position = Vector2( -1, 26 )
+scale = Vector2( 1.6875, 1 )
+texture = ExtResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 3, 3 )
